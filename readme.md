@@ -1,4 +1,4 @@
-# 프로젝트 SoRa Clinic Global
+# SoRa Clinic Global
 <h2>:pushpin: Project Overview</h2>
 <ul>
     <li><strong>Project Name:</strong>:star: Sora Clinic</li>
@@ -14,69 +14,5 @@
     <li>Figma (UI/UX Design)</li>
 </ul>
 
-<h2>:busts_in_silhouette: Team</h2>
-<ul>
-    <li>기획 팀장, 디자인 : 조태정</li>
-    <li>멀티 팀장, 개발, 디자인 : 수산나</li>
-    <li>개발 팀장 : 김민규</li>
-</ul>
 
-<h2>:art: UX/UI</h2>
-<ul>
-     <li>Figma: <a href="https://www.figma.com/design/rWGRBWcqvkuVFnjPYwnc7K/Project_sora?node-id=32-108&t=HdIbwCj9lmd1HLKj-1" target="_blank">
-            View Figma Design
-        </a></li>
-    </li> 
-    <li> Git Address: <a href="https://github.com/minnngyu97/soraclinic-global.git" target="_blank">
-            View Figma Design
-        </a>
-    </li>
-    <li> Git Page: <a href="https://minnngyu97.github.io/soraclinic-global/" target="_blank">
-            View Figma Design
-        </a>
-    </li>
-</ul>
-<h2>:bookmark: 커밋관리정보</h2>
-<ul>
-    <li>[0.0] 환경 세팅은 0. Readme 초안</li>
-    <li>[1.0] 메인페이지는 앞에 1로 시작</li>
-    <li>[2.0] 상세페이지는 앞에 2로 시작</li>
-    <li>[3.0] 기획&이벤트 페이지는 앞에 3으로 시작</li>
-    <li>[4.0] 이미지추가는 앞에 4으로 시작</li>
-</ul>
 
-<h2>:file_folder: Folder Structure (Simplified)</h2>
-<pre><code>
-soraclinic-global/
-├── index.html
-├── event-page.html
-├── filler-botox-page.html
-├── readme.md
-├── assets/
-│   ├── font/
-│   ├── images/
-│   │   ├── img-icon/
-│   │   ├── img-main/
-│   │   ├── img-sub/
-│   │   ├── ico.png
-│   │   ├── logo.png
-│   │   └── og_img02.png
-├── scss/
-│   ├── _components.scss
-│   ├── _global.scss
-│   ├── _layout.scss
-│   ├── _mingyu.scss
-│   ├── _mixins.scss
-│   ├── _reset.scss
-│   ├── _section.scss
-│   ├── _swiper.scss
-│   ├── _typography.scss
-│   ├── _variables.scss
-│   ├── main.css
-│   ├── main.min.css
-│   └── main.scss
-├── js/
-│   ├── header.js
-│   └── swiper.js
-
-</code></pre>
