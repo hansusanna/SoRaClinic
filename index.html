@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/img-icon/favicon.png"/>
+    <link rel="apple-touch-icon" href="./assets/images/img-icon/favicon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="./assets/images/img-icon/favicon.png"/>
+    <meta name="msapplication-TileImage" content="./assets/images/img-icon/favicon.png" size="270x270"/>
+    <meta name="description" content="Start your beauty with us" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="SoRa Clinic" />
+    <meta property="og:url" content="https://minnngyu97.github.io/soraclinic-global/"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SoRa Clinic" />
+    <meta property="og:description" content="Start your beauty with us" />
+    <meta property="og:image" content="https://minnngyu97.github.io/soraclinic-global/assets/images/og_img02.png"/>
+    <meta name="twitter:title" content="SoRa Clinic" />
+    <meta name="twitter:description" content="Start your beauty with us" />
+    <meta name="twitter:image" content="https://minnngyu97.github.io/soraclinic-global/assets/images/og_img02.png"/>
+    <title>soraclinic-global</title>
+    <!-- Pretendard 웹폰트 불러오기 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- 플러그인 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- 커스터마이징 -->
+    <link rel="stylesheet" href="./scss/main.min.css">
+  </head>
+  <body class="main">
+    <div class="wrap"> 
+      <header id="hd">
+        <div class="hd-group">
+          <div class="hd-logo">
+            <h1 class="logo">
+              <a href="index.html" class="logo-link">
+                <svg class="logo-pc d-none d-sm-block" width="150" height="50" viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.98" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="#FFCA28" fill-opacity="0.69"/>
+                  <path opacity="0.55" d="M47 15C47 22.732 40.732 29 33 29C25.268 29 19 22.732 19 15C19 7.26801 25.268 1 33 1C40.732 1 47 7.26801 47 15Z" fill="#9668FA" fill-opacity="0.7"/>
+                  <path opacity="0.29" d="M36 29.5C36 36.9558 29.732 43 22 43C14.268 43 8 36.9558 8 29.5C8 22.0442 14.268 16 22 16C29.732 16 36 22.0442 36 29.5Z" fill="#01BED5"/>
+                  <path d="M124.803 37.282C124.803 34.93 125.265 32.844 126.189 31.024C127.141 29.204 128.415 27.804 130.011 26.824C131.635 25.844 133.441 25.354 135.429 25.354C137.165 25.354 138.677 25.704 139.965 26.404C141.281 27.104 142.331 27.986 143.115 29.05V25.732H149.037V49H143.115V45.598C142.359 46.69 141.309 47.6 139.965 48.328C138.649 49.028 137.123 49.378 135.387 49.378C133.427 49.378 131.635 48.874 130.011 47.866C128.415 46.858 127.141 45.444 126.189 43.624C125.265 41.776 124.803 39.662 124.803 37.282ZM143.115 37.366C143.115 35.938 142.835 34.72 142.275 33.712C141.715 32.676 140.959 31.892 140.007 31.36C139.055 30.8 138.033 30.52 136.941 30.52C135.849 30.52 134.841 30.786 133.917 31.318C132.993 31.85 132.237 32.634 131.649 33.67C131.089 34.678 130.809 35.882 130.809 37.282C130.809 38.682 131.089 39.914 131.649 40.978C132.237 42.014 132.993 42.812 133.917 43.372C134.869 43.932 135.877 44.212 136.941 44.212C138.033 44.212 139.055 43.946 140.007 43.414C140.959 42.854 141.715 42.07 142.275 41.062C142.835 40.026 143.115 38.794 143.115 37.366Z" fill="#49C9D9"/>
+                  <path d="M114.151 49L107.683 37.576H104.911V49H99.0309V19.684H110.035C112.303 19.684 114.235 20.09 115.831 20.902C117.427 21.686 118.617 22.764 119.401 24.136C120.213 25.48 120.619 26.992 120.619 28.672C120.619 30.604 120.059 32.354 118.939 33.922C117.819 35.462 116.153 36.526 113.941 37.114L120.955 49H114.151ZM104.911 33.166H109.825C111.421 33.166 112.611 32.788 113.395 32.032C114.179 31.248 114.571 30.17 114.571 28.798C114.571 27.454 114.179 26.418 113.395 25.69C112.611 24.934 111.421 24.556 109.825 24.556H104.911V33.166Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                  <path d="M82.2018 49.378C79.9618 49.378 77.9458 48.888 76.1538 47.908C74.3618 46.9 72.9478 45.486 71.9118 43.666C70.9038 41.846 70.3998 39.746 70.3998 37.366C70.3998 34.986 70.9178 32.886 71.9538 31.066C73.0178 29.246 74.4598 27.846 76.2798 26.866C78.0998 25.858 80.1298 25.354 82.3698 25.354C84.6098 25.354 86.6398 25.858 88.4598 26.866C90.2798 27.846 91.7078 29.246 92.7438 31.066C93.8078 32.886 94.3398 34.986 94.3398 37.366C94.3398 39.746 93.7938 41.846 92.7018 43.666C91.6378 45.486 90.1818 46.9 88.3338 47.908C86.5138 48.888 84.4698 49.378 82.2018 49.378ZM82.2018 44.254C83.2658 44.254 84.2598 44.002 85.1838 43.498C86.1358 42.966 86.8918 42.182 87.4518 41.146C88.0118 40.11 88.2918 38.85 88.2918 37.366C88.2918 35.154 87.7038 33.46 86.5278 32.284C85.3798 31.08 83.9658 30.478 82.2858 30.478C80.6058 30.478 79.1918 31.08 78.0438 32.284C76.9238 33.46 76.3638 35.154 76.3638 37.366C76.3638 39.578 76.9098 41.286 78.0018 42.49C79.1218 43.666 80.5218 44.254 82.2018 44.254Z" fill="#49C9D9"/>
+                  <path d="M56.02 49.294C53.976 49.294 52.128 48.944 50.476 48.244C48.852 47.544 47.564 46.536 46.612 45.22C45.66 43.904 45.17 42.35 45.142 40.558H51.442C51.526 41.762 51.946 42.714 52.702 43.414C53.486 44.114 54.55 44.464 55.894 44.464C57.266 44.464 58.344 44.142 59.128 43.498C59.912 42.826 60.304 41.958 60.304 40.894C60.304 40.026 60.038 39.312 59.506 38.752C58.974 38.192 58.302 37.758 57.49 37.45C56.706 37.114 55.614 36.75 54.214 36.358C52.31 35.798 50.756 35.252 49.552 34.72C48.376 34.16 47.354 33.334 46.486 32.242C45.646 31.122 45.226 29.638 45.226 27.79C45.226 26.054 45.66 24.542 46.528 23.254C47.396 21.966 48.614 20.986 50.182 20.314C51.75 19.614 53.542 19.264 55.558 19.264C58.582 19.264 61.032 20.006 62.908 21.49C64.812 22.946 65.862 24.99 66.058 27.622H59.59C59.534 26.614 59.1 25.788 58.288 25.144C57.504 24.472 56.454 24.136 55.138 24.136C53.99 24.136 53.066 24.43 52.366 25.018C51.694 25.606 51.358 26.46 51.358 27.58C51.358 28.364 51.61 29.022 52.114 29.554C52.646 30.058 53.29 30.478 54.046 30.814C54.83 31.122 55.922 31.486 57.322 31.906C59.226 32.466 60.78 33.026 61.984 33.586C63.188 34.146 64.224 34.986 65.092 36.106C65.96 37.226 66.394 38.696 66.394 40.516C66.394 42.084 65.988 43.54 65.176 44.884C64.364 46.228 63.174 47.306 61.606 48.118C60.038 48.902 58.176 49.294 56.02 49.294Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                </svg>
+                <svg class="logo-mo d-sm-none" width="87" height="59" viewBox="0 0 87 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.98" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="#FFCA28" fill-opacity="0.69"/>
+                  <path opacity="0.55" d="M48 15C48 22.732 41.732 29 34 29C26.268 29 20 22.732 20 15C20 7.26801 26.268 1 34 1C41.732 1 48 7.26801 48 15Z" fill="#9668FA" fill-opacity="0.7"/>
+                  <path opacity="0.29" d="M36 28.5C36 35.9558 29.732 42 22 42C14.268 42 8 35.9558 8 28.5C8 21.0442 14.268 15 22 15C29.732 15 36 21.0442 36 28.5Z" fill="#01BED5"/>
+                  <path d="M79.9897 58L73.5218 46.576H70.7498V58H64.8698V28.684H75.8738C78.1418 28.684 80.0738 29.09 81.6698 29.902C83.2658 30.686 84.4557 31.764 85.2397 33.136C86.0517 34.48 86.4578 35.992 86.4578 37.672C86.4578 39.604 85.8978 41.354 84.7778 42.922C83.6578 44.462 81.9918 45.526 79.7798 46.114L86.7938 58H79.9897ZM70.7498 42.166H75.6637C77.2598 42.166 78.4497 41.788 79.2337 41.032C80.0177 40.248 80.4098 39.17 80.4098 37.798C80.4098 36.454 80.0177 35.418 79.2337 34.69C78.4497 33.934 77.2598 33.556 75.6637 33.556H70.7498V42.166Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                  <path d="M49.02 58.294C46.976 58.294 45.128 57.944 43.476 57.244C41.852 56.544 40.564 55.536 39.612 54.22C38.66 52.904 38.17 51.35 38.142 49.558H44.442C44.526 50.762 44.946 51.714 45.702 52.414C46.486 53.114 47.55 53.464 48.894 53.464C50.266 53.464 51.344 53.142 52.128 52.498C52.912 51.826 53.304 50.958 53.304 49.894C53.304 49.026 53.038 48.312 52.506 47.752C51.974 47.192 51.302 46.758 50.49 46.45C49.706 46.114 48.614 45.75 47.214 45.358C45.31 44.798 43.756 44.252 42.552 43.72C41.376 43.16 40.354 42.334 39.486 41.242C38.646 40.122 38.226 38.638 38.226 36.79C38.226 35.054 38.66 33.542 39.528 32.254C40.396 30.966 41.614 29.986 43.182 29.314C44.75 28.614 46.542 28.264 48.558 28.264C51.582 28.264 54.032 29.006 55.908 30.49C57.812 31.946 58.862 33.99 59.058 36.622H52.59C52.534 35.614 52.1 34.788 51.288 34.144C50.504 33.472 49.454 33.136 48.138 33.136C46.99 33.136 46.066 33.43 45.366 34.018C44.694 34.606 44.358 35.46 44.358 36.58C44.358 37.364 44.61 38.022 45.114 38.554C45.646 39.058 46.29 39.478 47.046 39.814C47.83 40.122 48.922 40.486 50.322 40.906C52.226 41.466 53.78 42.026 54.984 42.586C56.188 43.146 57.224 43.986 58.092 45.106C58.96 46.226 59.394 47.696 59.394 49.516C59.394 51.084 58.988 52.54 58.176 53.884C57.364 55.228 56.174 56.306 54.606 57.118C53.038 57.902 51.176 58.294 49.02 58.294Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                </svg>
+              </a>
+            </h1>
+          </div>
+          <div class="hd-nav">
+            <nav class="nav-area">
+              <ul class="nav-list nav-hover fs-15 fw600">
+                <li class="nav-item">
+                  <a href="#sc-our-story" class="nav-link">Our Story</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#sc-doctors" class="nav-link">Doctors</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#sc-our-value" class="nav-link">Our Value</a>
+                </li>
+                <li class="nav-item hd-nav-wrap">
+                  <a href="" class="nav-link top-menu">Treatment
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="d-lg-none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.71 9.557l-6.003 6.01a1 1 0 01-1.415 0L5.29 9.556 6.705 8.14 12 13.44l5.295-5.3 1.415 1.417z" fill="#000"></path></svg>
+                  </a>
+                  <ul class="sub depth1-list">
+                    <li class="depth1-item">
+                      <a href="" class="nav-link">Skin Care</a>
+                    </li>
+                    <li class="depth1-item">
+                      <a href="" class="nav-link">Anti-Aging</a>
+                    </li>
+                    <li class="depth1-item">
+                      <a href="" class="nav-link">Laser</a>
+                    </li>
+                    <li class="depth1-item">
+                      <a href="" class="nav-link">Filler/Botox</a>
+                    </li>
+                    <li class="depth1-item">
+                      <a href="" class="nav-link">Body</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                  <a href="event-page.html" class="nav-link">Event</a>
+                </li>
+                <li class="nav-item d-none d-lg-flex">
+                  <a href="#sc-contact" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <i class="hd-dim"></i>
+          <div class="hd-sub-nav">
+            <button class="bn-btn fw500 d-none d-lg-block">BOOK NOW</button>
+            <div class="lang-btn-wrap">
+              <button class="lang-btn gap-2" aria-haspopup="true">
+                <svg class="d-none d-sm-block" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.7499 17.5C33.7499 19.6341 33.3296 21.7473 32.5129 23.7189C31.6962 25.6905 30.4992 27.482 28.9902 28.991C27.4811 30.5001 25.6897 31.6971 23.718 32.5138C21.7464 33.3305 19.6332 33.7508 17.4991 33.7508C15.365 33.7508 13.2518 33.3305 11.2802 32.5138C9.30855 31.6971 7.51707 30.5001 6.00804 28.991C4.49902 27.482 3.30199 25.6905 2.48531 23.7189C1.66863 21.7473 1.24829 19.6341 1.24829 17.5C1.24829 13.19 2.96043 9.05655 6.00804 6.00893C9.05566 2.96131 13.1891 1.24918 17.4991 1.24918C21.8091 1.24918 25.9425 2.96131 28.9902 6.00893C32.0378 9.05655 33.7499 13.19 33.7499 17.5Z" stroke="#4C5354" stroke-width="1.5"/>
+                  <path d="M23.9998 17.5C23.9998 19.6336 23.8308 21.7477 23.5042 23.7189C23.1792 25.69 22.6998 27.4807 22.0953 28.9904C21.4925 30.5 20.7758 31.696 19.9877 32.5134C19.198 33.3291 18.353 33.75 17.4998 33.75C16.6467 33.75 15.8017 33.3291 15.0136 32.5134C14.2238 31.696 13.5072 30.4984 12.9043 28.9904C12.2998 27.4807 11.8205 25.6916 11.4938 23.7189C11.1606 21.6628 10.9954 19.5829 10.9998 17.5C10.9998 15.3664 11.1672 13.2523 11.4938 11.2811C11.8205 9.31 12.2998 7.51925 12.9043 6.00962C13.5072 4.5 14.2238 3.304 15.012 2.48662C15.8017 1.6725 16.6467 1.25 17.4998 1.25C18.353 1.25 19.198 1.67087 19.9861 2.48662C20.7758 3.304 21.4925 4.50162 22.0953 6.00962C22.6998 7.51925 23.1792 9.30838 23.5042 11.2811C23.8325 13.2523 23.9998 15.3664 23.9998 17.5Z" stroke="#4C5354" stroke-width="1.5"/>
+                  <path d="M1.25 17.5H33.75" stroke="#4C5354" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="lang-txt">EN</span>
+              </button>
+              <ul class="btn-list">
+                <li class="btn-item"><a href="#" class="lang-link">KR</a></li>
+                <li class="btn-item"><a href="#" class="lang-link">EN</a></li>
+                <li class="btn-item"><a href="#" class="lang-link">CH</a></li>
+                <li class="btn-item"><a href="#" class="lang-link">JP</a></li>
+              </ul>
+            </div>
+            <div class="hd-mo-nav-btn">
+              <div class="trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="mo-sub-menu d-lg-none">
+          <ul class="d-flex justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="event-page.html">Event</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sc-contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main id="main" class="overflow-hidden">
+        <!--메인비주얼-->
+        <section id="mainVisual" class="sc-slide w-100 position-relative overflow-hidden">
+          <div class="hero-float hero-float-1"></div>
+          <div class="hero-float hero-float-2"></div>
+          <div class="hero-float hero-float-3"></div>
+          <div class="swiper slide1 position-relative w-100">
+            <div class="swiper-wrapper">
+              <!--슬라이드1-->
+              <div class="swiper-slide">
+                <a href="" class="d-flex align-items-center d-block overflow-hidden">
+                  <div class="hero-container d-flex align-items-center px-4 m-auto">
+                    <div class="hero-grid d-flex flex-column flex-lg-row gap-5 w-100 align-items-center">
+                      <div class="d-flex flex-column align-items-center align-items-lg-start gap-4">
+                        <div class="hero-badge">
+                          <span class="hero-badge-text d-flex px-3 py-2 border-1 rounded-5 gap-1 fw500 bg-white">
+                            <img src="./assets/images/img-icon/heart.svg" alt="">
+                            <p>LIVE YOUR LIFE</p>
+                          </span>
+                        </div>
+                        
+                        <div class="hero-title-wrap d-flex text-center text-lg-start flex-column gap-4">
+                          <div class="hero-title">
+                            Winkle Free
+                            <br />
+                            <span class="hero-title-secondary">Event In July!</span>
+                          </div>
+                          <p class="hero-desc d-none d-md-block">
+                            Experience the power of <span class="hero-highlight">"Xeomin"</span> — our most trusted botox 
+                            treatment designed to smooth away fine lines and wrinkles, 
+                            leaving you looking naturally youthful and refreshed.
+                          </p>
+                        </div>
+                        <div class="hero-btn-wrap about_txt_doctor flex-column gap-3 justify-content-start align-items-center">
+                          <button class="hero-btn fw500 py-3 px-4 rounded-5">GO TO EVENT PAGE</button>
+                        </div>
+                      </div>
+                      <div class="position-relative">
+                        <div class="hero-image-box position-relative overflow-hidden">
+                          <div class="placeholder-image">
+                            <img class="hero-image w-100" src="./assets/images/img-main/girl1.jpg" alt="">
+                          </div>
+                          <div class="hero-image-gradient position-absolute"></div>
+                        </div>
+                        <div class="hero-product-badge position-absolute">
+                          <div class="placeholder-product">
+                            <img class="hero-product-img" src="./assets/images/img-main/xeomin.jpg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--슬라이드1//-->
+              <div class="swiper-slide">
+                <a href="" class="d-flex align-items-center d-block overflow-hidden">
+                  <div class="hero-container d-flex align-items-center px-4 m-auto">
+                    <div class="hero-grid d-flex flex-column flex-lg-row gap-5 w-100 align-items-center">
+                      <div class="d-flex flex-column gap-4 align-items-center align-items-lg-start">
+                        <div class="hero-badge">
+                          <span class="hero-badge-text d-flex px-3 py-2 border-1 rounded-5 gap-1 fw500 bg-white">
+                            <img src="./assets/images/img-icon/heart.svg" alt="">
+                            <p>LIVE YOUR LIFE</p>
+                          </span>
+                        </div>
+                        
+                        <div class="hero-title-wrap d-flex text-center text-lg-start flex-column gap-4">
+                          <div class="hero-title">Skin Booster <br />
+                            <span class="hero-title-secondary">for your anti-ageing project</span>
+                          </div>
+                          
+                          <p class="hero-desc d-none d-md-block">
+                            Discover why <span class="hero-highlight">Rejuran</span>  is the go-to skin booster in Korea. Its rejuvenating power leaves your skin smoother, firmer, and beautifully radiant — almost instantly.
+                          </p>
+                        </div>
+                        
+                        <div class="hero-btn-wrap d-flex flex-column gap-3 justify-content-start align-items-center">
+                          <button class="hero-btn fw500 py-3 px-4 rounded-5">GO TO EVENT PAGE</button>
+                        </div>
+                      </div>
+                      
+                      <div class="position-relative">
+                        <div class="hero-image-box position-relative overflow-hidden">
+                          <div class="placeholder-image">
+                            <img class="hero-image w-100" src="./assets/images/img-main/girl2.jpg" alt="">
+                          </div>
+                          <div class="hero-image-gradient position-absolute"></div>
+                        </div>
+                        
+                        <div class="hero-product-badge position-absolute">
+                          <div class="placeholder-product">
+                            <img class="hero-product-img" src="./assets/images/img-main/inmode.jpg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--슬라이드2//-->
+              <div class="swiper-slide">
+                <a href="" class="d-flex align-items-center d-block overflow-hidden">
+                  <div class="hero-container d-flex align-items-center px-4 m-auto">
+                    <div class="hero-grid d-flex flex-column flex-lg-row gap-5 w-100 align-items-center">
+                      <div class="d-flex flex-column gap-4 align-items-center align-items-lg-start">
+                        <div class="hero-badge">
+                          <span class="hero-badge-text d-flex px-3 py-2 border-1 rounded-5 gap-1 fw500 bg-white">
+                            <img src="./assets/images/img-icon/heart.svg" alt="">
+                            <p>LIVE YOUR LIFE</p>
+                          </span>
+                        </div>
+                        
+                        <div class="hero-title-wrap d-flex text-center text-lg-start flex-column gap-4">
+                          <div class="hero-title">
+                            <span class="hero-title-secondary">Find your</span>
+                            <br />
+                            V-line
+                            <br>
+                            <span class="hero-title-secondary"> from our solution</span>
+                          </div>
+                          
+                          <p class="hero-desc d-none d-md-block">
+                            Snap a selfie right after your session — and see the results instantly. Our InMode treatment is pain-free, safe, and designed to sculpt your perfect V-line.
+                          </p>
+                        </div>
+                        
+                        <div class="hero-btn-wrap d-flex flex-column gap-3 justify-content-start align-items-center">
+                          <button class="hero-btn fw500 py-3 px-4 rounded-5">GO TO EVENT PAGE</button>
+                        </div>
+                      </div>
+                      
+                      <div class="position-relative">
+                        <div class="hero-image-box position-relative overflow-hidden">
+                          <div class="placeholder-image">
+                            <img class="hero-image w-100" src="./assets/images/img-main/girl3.jpg" alt="">
+                          </div>
+                          <div class="hero-image-gradient position-absolute"></div>
+                        </div>
+                        
+                        <div class="hero-product-badge position-absolute">
+                          <div class="placeholder-product">
+                            <img class="hero-product-img" src="./assets/images/img-main/ulthera.jpg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div> 
+              <!--슬라이드3//-->                          
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!--메인비주얼//-->
+        <!--이벤트배너-->
+        <section id="sc-event-desc" class="py-5">
+          <div class="container text-center">          
+            <div class="row g-4">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm card-hover position-relative">
+                  <div class="card-body d-flex flex-column pb-0">
+                    <!-- 뱃지위치 (절대 위치 지정) -->
+                    <div class="position-absolute top-0 start-0 m-2">
+                      <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_295_446)">
+                        <path d="M0 0H28V36L14 29.0323L0 36V0Z" fill="#CBF3F0"/>
+                        <path d="M15.0449 10.1016V20H12.9805V12.0566H12.9258L10.6562 13.4785V11.6602L13.1035 10.1016H15.0449Z" fill="#1CBCCF"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_295_446">
+                        <rect width="28" height="36" rx="5" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                     </div>
+                     <!-- 콘텐츠 중앙정렬 -->
+                    <div class="flex-center flex-column text-center flex-grow-1 px-2">
+                      <h3 class="event-title mb-1">Rejuran Healer 1cc</h3>
+                      <p class="event-desc mb-0">*Minimum 2cc<p>
+                    </div> 
+                     <!--가격 표시(하단고정)-->
+                    <p class="event-price mt-auto text-end pt-3"><span class="price-original">155,000</span> ₩ 89,000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm card-hover position-relative">
+                  <div class="card-body d-flex flex-column pb-0">
+                    <div class="position-absolute top-0 start-0 m-2">
+                      <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_295_449)">
+                        <path d="M0 0H28V36L14 29.0323L0 36V0Z" fill="#CBF3F0"/>
+                        <path d="M10.7793 20L10.7656 18.5098L14.3203 15.2422C15.25 14.3535 15.7422 13.8066 15.7422 13.0273C15.7422 12.1523 15.0723 11.6055 14.1699 11.6055C13.2402 11.6055 12.6387 12.1934 12.6387 13.1367H10.6836C10.6699 11.1953 12.1055 9.96484 14.1973 9.96484C16.3164 9.96484 17.7246 11.168 17.7246 12.8906C17.7246 14.0117 17.1777 14.9414 15.1406 16.7871L13.6367 18.25V18.3047H17.8613V20H10.7793Z" fill="#1CBCCF"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_295_449">
+                        <rect width="28" height="36" rx="5" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>                        
+                     </div>
+                     <!-- 콘텐츠 중앙정렬 -->
+                    <div class="flex-center flex-column text-center flex-grow-1 px-2">
+                      <h3 class="event-title mb-1">Ulthera Prime 100 Shots</h3>
+                      <p class="event-desc mb-0">Next-level skin<p>
+                    </div> 
+                    <!--가격 표시(하단고정)-->
+                    <p class="event-price mt-auto text-end"><span class="price-original">590,000</span> ₩ 420,000</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm card-hover position-relative">
+                  <div class="card-body d-flex flex-column pb-0">
+                    <div class="position-absolute top-0 start-0 m-2">
+                      <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_295_452)">
+                        <path d="M0 0H28V36L14 29.0323L0 36V0Z" fill="#CBF3F0"/>
+                        <path d="M14.4434 20.1367C12.2695 20.1367 10.7109 18.9336 10.6699 17.2109H12.748C12.7891 17.9492 13.5 18.4414 14.457 18.4414C15.4414 18.4414 16.1523 17.8809 16.1387 17.0879C16.1523 16.2812 15.4277 15.707 14.2656 15.707H13.3496V14.1895H14.2656C15.2363 14.1895 15.9199 13.6562 15.9199 12.877C15.9199 12.125 15.3457 11.6055 14.4707 11.6055C13.5957 11.6055 12.8711 12.0977 12.8438 12.8496H10.875C10.9023 11.1406 12.4473 9.96484 14.4707 9.96484C16.5352 9.96484 17.916 11.1816 17.9023 12.7539C17.916 13.8613 17.1367 14.6543 16.0293 14.8457V14.9277C17.4785 15.1055 18.2852 15.9941 18.2715 17.2246C18.2852 18.9199 16.6719 20.1367 14.4434 20.1367Z" fill="#1CBCCF"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_295_452">
+                        <rect width="28" height="36" rx="5" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg> 
+                     </div>
+                     <!-- 콘텐츠 중앙정렬 -->
+                    <div class="flex-center flex-column text-center flex-grow-1 px-2">
+                      <h3 class="event-title mb-1">Face Onda 10kJ</h3>
+                      <p class="event-desc mb-0">*Minimum 300 Shots<p>
+                    </div> 
+                     <!--가격 표시(하단고정)-->
+                    <p class="event-price mt-auto text-end"><span class="price-original">190,000</span> ₩ 99,000 </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm card-hover d-flex flex-column ">
+                  <div class="card-body d-flex flex-column pb-0">
+                    <div class="position-absolute top-0 start-0 m-2">
+                      <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_295_455)">
+                        <path d="M0 0H28V36L14 29.0323L0 36V0Z" fill="#CBF3F0"/>
+                        <path d="M10.6152 18.25V16.623L14.7988 10.1016H17.3828V16.5957H18.6406V18.25H17.3828V20H15.4277V18.25H10.6152ZM12.6934 16.5957H15.4551V12.3574H15.3594L12.6934 16.5137V16.5957Z" fill="#1CBCCF"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_295_455">
+                        <rect width="28" height="36" rx="5" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                     </div>
+                      <!-- 콘텐츠 중앙정렬 -->
+                    <div class="flex-center flex-column text-center flex-grow-1 px-2">
+                      <h3 class="event-title mb-1">InMode Full Face 1 Mode</h3>
+                      <p class="event-desc mb-0">Precise Lifting<p>
+                    </div> 
+                    <!--가격 표시(하단고정)-->
+                    <p class="event-price mt-auto text-end"><span class="price-original">135,000</span> ₩ 79,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--상품서비스-->
+        <section id="sc-our-value" class="py-3">
+            <div class="container py-5 services-con">
+              <div class="mb-4 px-4">   
+                <h2 class="services-title">Best Treatments In Our Clinic!</h2>
+              </div>
+              <!-- Grid 컨테이너 -->
+              <div class="services-banner px-4">
+                <a href="#" class="svc-card Ulthera_bg" aria-label="Learn more about Ulthera">
+                  <h4 class="services-h4 pt-3">Ulthera</h4>
+                </a>
+                <a href="#" class="svc-card Botox_bg" aria-label="Learn more about Botox">
+                  <h4 class="services-h4 pt-3">Botox</h4>
+                </a>
+                <a href="#" class="svc-card Inmode_bg" aria-label="Learn more about Inmode">
+                  <h4 class="services-h4 pt-3">Inmode</h4>
+                </a>
+                <a href="#" class="svc-card Thermage_bg" aria-label="Learn more about Thermage">
+                  <h4 class="services-h4 pt-3">Thermage</h4>
+                </a>
+              </div>
+            </div>
+        </section>
+        <!-- 병원 안내 -->
+        <section id="sc-our-story" class="px-3 px-sm-4 px-md-5 py-5 mb-5 mb-md-0 section-about">
+          <div class="container about_box gap-5">
+            <!-- 왼쪽 텍스트박스 -->
+            <div class="about-left flex-fill">
+              <div class="about_txt_box p-4 quote">
+                <h5 class="about_txt_tit mb-1">Don't Become Someone Else. Be Your Best Self.</h5>
+                <p class="about_txt_desc multi-line-ellipsis-3 mb-1">
+                  Private Beauty SoRa Clinic emphasizes natural beauty, 
+                  celebrating each individual’s unique features instead of adhering to societal norms. 
+                  Our mission is to help your personal radiance shine even brighter.
+                </p>
+                <p class="about_txt_doctor mt-3 mb-0">Ki Beom Park Chief Director</p>
+              </div>
+              <div class="about_txt_box p-4 quote ms-md-5">
+                <h5 class="about_txt_tit mb-1">We enhance your unique features.</h5>
+                <p class="about_txt_desc multi-line-ellipsis-3 mb-1">
+                  Every face tells a story. 
+                  Just as changing a scene without considering the whole plot creates awkwardness, 
+                  treatments that disregard your unique aura and aesthetic preferences rarely satisfy. 
+                  At Private Beauty SoRa Clinic, become your best self, not someone else.
+                </p>
+                <p class="about_txt_doctor mt-3 mb-0">Leslie Taylor Chief Director</p>
+              </div>
+            </div>    
+            <!-- 오른쪽 슬라이더 -->
+            <div class="about-right flex-fill mt-3 mt-md-0">
+              <div id="clinicCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"> 
+                <!-- Slides -->
+                <div class="carousel-inner h-100">
+                  <div class="carousel-item active h-100">
+                    <img src="./assets/images/img-main/clinic_view_01.png" class="d-block w-100 h-100 object-fit-cover" alt="클리닉 내부1">
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img src="./assets/images/img-main/clinic_view_02.png" class="d-block w-100 h-100 object-fit-cover" alt="클리닉 내부2">
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img src="./assets/images/img-main/clinic_view_03.png" class="d-block w-100 h-100 object-fit-cover" alt="클리닉 내부3">
+                  </div>
+                </div>
+                <!-- Indicators -->
+                <div class="carousel-indicators mb-0">
+                  <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="2"></button>
+                </div>
+              </div>
+            </div>        
+          </div>
+        </section>
+
+        <!-- 의료진 소개 -->
+        <section id="sc-doctors">
+          <div class="container py-5 doctors-section">
+            <div class="doctors-title mb-4">
+              <h2 class="fw-semibold">Doctors</h2>
+            </div>
+            <div id="doctorCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-inner">
+
+                <!-- 슬라이드 1 -->
+                <div class="carousel-item active">
+                  <div class="row justify-content-center g-4">
+                    <div class="col-12 col-md-6">
+                      <article class="doctor-card">
+                        <div class="doctor-img">
+                          <img src="./assets/images/img-main/doctor1.png" alt="Doctor 3" class="img-fluid">
+                        </div>
+                        <div class="doctor-info">
+                          <h5 class="doctor-name multi-line-ellipsis-2 mb-1">Dr. Leslie Taylor</h5>
+                          <p class="doctor-position mb-3">Doctor</p>
+                          <p class="doctor-intro mb-4">Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac penatibus et.</p>
+                          <div class="doctors-sns">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-linkedin"></i>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <article class="doctor-card">
+                        <div class="doctor-img">
+                          <img src="./assets/images/img-main/doctor2.png" alt="Doctor 4" class="img-fluid">
+                        </div>
+                        <div class="doctor-info">
+                          <h5 class="doctor-name multi-line-ellipsis-2 mb-1">Dr. Zachary Brown</h5>
+                          <p class="doctor-position mb-3">Doctor</p>
+                          <p class="doctor-intro mb-4">Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac penatibus et.</p>
+                          <div class="doctors-sns">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-linkedin"></i>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 슬라이드 2 -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center g-4">
+                    <div class="col-12 col-md-6">
+                      <article class="doctor-card">
+                        <div class="doctor-img">
+                          <img src="./assets/images/img-main/doctor1.png" alt="Doctor 3" class="img-fluid">
+                        </div>
+                        <div class="doctor-info">
+                          <h5 class="doctor-name multi-line-ellipsis-2 mb-1">Dr. Leslie Taylor</h5>
+                          <p class="doctor-position mb-3">Doctor</p>
+                          <p class="doctor-intro mb-4">Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac penatibus et.</p>
+                          <div class="doctors-sns">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-linkedin"></i>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <article class="doctor-card">
+                        <div class="doctor-img">
+                          <img src="./assets/images/img-main/doctor2.png" alt="Doctor 4" class="img-fluid">
+                        </div>
+                        <div class="doctor-info">
+                          <h5 class="doctor-name multi-line-ellipsis-2 mb-1">Dr. Zachary Brown</h5>
+                          <p class="doctor-position mb-3">Doctor</p>
+                          <p class="doctor-intro mb-4">Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac penatibus et.</p>
+                          <div class="doctors-sns">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-linkedin"></i>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Pagination-->
+              <div class="carousel-indicators justify-content-center">
+                <button type="button" data-bs-target="#doctorCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#doctorCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 연락처 지도-->
+        <section id="sc-contact" class="container py-5">
+          <div class="contact-group container d-flex justify-content-between align-items-start align-items-sm-center flex-column flex-md-row rounded-4 gap-3">
+            <div class="contact-area w-100 d-flex justify-content-center flex-column gap-3">
+              <h2 class="fw600">Contacts</h2>
+              <div class="contact-box d-flex flex-column gap-3">
+                <p class="open-h fw600">Opening hours</p>
+                <div class="d-flex justify-content-between pb-2 border-bottom border-1">
+                  <span class="day fw400">Monday - Friday</span>
+                  <span class="time fw500">10:10 Am - 8:00 Pm</span>
+                </div>
+                <div class="d-flex justify-content-between pb-2 border-bottom border-1">
+                  <span class="day fw400">Saturday</span>
+                  <span class="time fw500">10:10 Am - 3:00 Pm</span>
+                </div>
+                <p>Please come visit us once you have booked your preferred time.</p>
+              </div>
+              <div class="contact-addr-group">
+                <ul class="d-flex flex-column gap-3">
+                  <li class="d-flex align-items-center gap-1">
+                    <img src="./assets/images/img-icon/location.svg" alt="location icon">
+                    <span>6 floor, 123 building, Gangnam-gu, Seoul, Korea</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-1">
+                    <img src="./assets/images/img-icon/mail.svg" alt="mail icon">
+                    <a href="mailto:Info@soraclinic.com">Info@soraclinic.com</a>
+                  </li>
+                  <li class="d-flex align-items-center gap-1">
+                    <img src="./assets/images/img-icon/call.svg" alt="call icon">
+                    <a href="tel:+8255555555">(+82) 555-5555</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="google-map-area w-100 overflow-hidden">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d50643.57727949375!2d127.0194626!3d37.5026446!3m2!1i1024!2i768!4f13.1!2m1!1s6%20floor%20123%20building%20gangnam%20gu%20seoul%20korea!5e0!3m2!1sko!2skr!4v1753853535827!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+
+      <footer id="ft">
+        <div class="ft-group container d-flex flex-column gap-3 pt-5 pb-5">
+          <div class="d-flex justify-content-between flex-column flex-md-row row-gap-3">
+            <div class="ft-logo d-flex justify-content-center">
+              <a href="index.html" class="logo-link">
+                <svg class="logo-pc d-none d-sm-block" width="150" height="50" viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.98" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="#FFCA28" fill-opacity="0.69"/>
+                  <path opacity="0.55" d="M47 15C47 22.732 40.732 29 33 29C25.268 29 19 22.732 19 15C19 7.26801 25.268 1 33 1C40.732 1 47 7.26801 47 15Z" fill="#9668FA" fill-opacity="0.7"/>
+                  <path opacity="0.29" d="M36 29.5C36 36.9558 29.732 43 22 43C14.268 43 8 36.9558 8 29.5C8 22.0442 14.268 16 22 16C29.732 16 36 22.0442 36 29.5Z" fill="#01BED5"/>
+                  <path d="M124.803 37.282C124.803 34.93 125.265 32.844 126.189 31.024C127.141 29.204 128.415 27.804 130.011 26.824C131.635 25.844 133.441 25.354 135.429 25.354C137.165 25.354 138.677 25.704 139.965 26.404C141.281 27.104 142.331 27.986 143.115 29.05V25.732H149.037V49H143.115V45.598C142.359 46.69 141.309 47.6 139.965 48.328C138.649 49.028 137.123 49.378 135.387 49.378C133.427 49.378 131.635 48.874 130.011 47.866C128.415 46.858 127.141 45.444 126.189 43.624C125.265 41.776 124.803 39.662 124.803 37.282ZM143.115 37.366C143.115 35.938 142.835 34.72 142.275 33.712C141.715 32.676 140.959 31.892 140.007 31.36C139.055 30.8 138.033 30.52 136.941 30.52C135.849 30.52 134.841 30.786 133.917 31.318C132.993 31.85 132.237 32.634 131.649 33.67C131.089 34.678 130.809 35.882 130.809 37.282C130.809 38.682 131.089 39.914 131.649 40.978C132.237 42.014 132.993 42.812 133.917 43.372C134.869 43.932 135.877 44.212 136.941 44.212C138.033 44.212 139.055 43.946 140.007 43.414C140.959 42.854 141.715 42.07 142.275 41.062C142.835 40.026 143.115 38.794 143.115 37.366Z" fill="#49C9D9"/>
+                  <path d="M114.151 49L107.683 37.576H104.911V49H99.0309V19.684H110.035C112.303 19.684 114.235 20.09 115.831 20.902C117.427 21.686 118.617 22.764 119.401 24.136C120.213 25.48 120.619 26.992 120.619 28.672C120.619 30.604 120.059 32.354 118.939 33.922C117.819 35.462 116.153 36.526 113.941 37.114L120.955 49H114.151ZM104.911 33.166H109.825C111.421 33.166 112.611 32.788 113.395 32.032C114.179 31.248 114.571 30.17 114.571 28.798C114.571 27.454 114.179 26.418 113.395 25.69C112.611 24.934 111.421 24.556 109.825 24.556H104.911V33.166Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                  <path d="M82.2018 49.378C79.9618 49.378 77.9458 48.888 76.1538 47.908C74.3618 46.9 72.9478 45.486 71.9118 43.666C70.9038 41.846 70.3998 39.746 70.3998 37.366C70.3998 34.986 70.9178 32.886 71.9538 31.066C73.0178 29.246 74.4598 27.846 76.2798 26.866C78.0998 25.858 80.1298 25.354 82.3698 25.354C84.6098 25.354 86.6398 25.858 88.4598 26.866C90.2798 27.846 91.7078 29.246 92.7438 31.066C93.8078 32.886 94.3398 34.986 94.3398 37.366C94.3398 39.746 93.7938 41.846 92.7018 43.666C91.6378 45.486 90.1818 46.9 88.3338 47.908C86.5138 48.888 84.4698 49.378 82.2018 49.378ZM82.2018 44.254C83.2658 44.254 84.2598 44.002 85.1838 43.498C86.1358 42.966 86.8918 42.182 87.4518 41.146C88.0118 40.11 88.2918 38.85 88.2918 37.366C88.2918 35.154 87.7038 33.46 86.5278 32.284C85.3798 31.08 83.9658 30.478 82.2858 30.478C80.6058 30.478 79.1918 31.08 78.0438 32.284C76.9238 33.46 76.3638 35.154 76.3638 37.366C76.3638 39.578 76.9098 41.286 78.0018 42.49C79.1218 43.666 80.5218 44.254 82.2018 44.254Z" fill="#49C9D9"/>
+                  <path d="M56.02 49.294C53.976 49.294 52.128 48.944 50.476 48.244C48.852 47.544 47.564 46.536 46.612 45.22C45.66 43.904 45.17 42.35 45.142 40.558H51.442C51.526 41.762 51.946 42.714 52.702 43.414C53.486 44.114 54.55 44.464 55.894 44.464C57.266 44.464 58.344 44.142 59.128 43.498C59.912 42.826 60.304 41.958 60.304 40.894C60.304 40.026 60.038 39.312 59.506 38.752C58.974 38.192 58.302 37.758 57.49 37.45C56.706 37.114 55.614 36.75 54.214 36.358C52.31 35.798 50.756 35.252 49.552 34.72C48.376 34.16 47.354 33.334 46.486 32.242C45.646 31.122 45.226 29.638 45.226 27.79C45.226 26.054 45.66 24.542 46.528 23.254C47.396 21.966 48.614 20.986 50.182 20.314C51.75 19.614 53.542 19.264 55.558 19.264C58.582 19.264 61.032 20.006 62.908 21.49C64.812 22.946 65.862 24.99 66.058 27.622H59.59C59.534 26.614 59.1 25.788 58.288 25.144C57.504 24.472 56.454 24.136 55.138 24.136C53.99 24.136 53.066 24.43 52.366 25.018C51.694 25.606 51.358 26.46 51.358 27.58C51.358 28.364 51.61 29.022 52.114 29.554C52.646 30.058 53.29 30.478 54.046 30.814C54.83 31.122 55.922 31.486 57.322 31.906C59.226 32.466 60.78 33.026 61.984 33.586C63.188 34.146 64.224 34.986 65.092 36.106C65.96 37.226 66.394 38.696 66.394 40.516C66.394 42.084 65.988 43.54 65.176 44.884C64.364 46.228 63.174 47.306 61.606 48.118C60.038 48.902 58.176 49.294 56.02 49.294Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                </svg>
+                <svg class="logo-mo d-sm-none" width="87" height="59" viewBox="0 0 87 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.98" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14Z" fill="#FFCA28" fill-opacity="0.69"/>
+                  <path opacity="0.55" d="M48 15C48 22.732 41.732 29 34 29C26.268 29 20 22.732 20 15C20 7.26801 26.268 1 34 1C41.732 1 48 7.26801 48 15Z" fill="#9668FA" fill-opacity="0.7"/>
+                  <path opacity="0.29" d="M36 28.5C36 35.9558 29.732 42 22 42C14.268 42 8 35.9558 8 28.5C8 21.0442 14.268 15 22 15C29.732 15 36 21.0442 36 28.5Z" fill="#01BED5"/>
+                  <path d="M79.9897 58L73.5218 46.576H70.7498V58H64.8698V28.684H75.8738C78.1418 28.684 80.0738 29.09 81.6698 29.902C83.2658 30.686 84.4557 31.764 85.2397 33.136C86.0517 34.48 86.4578 35.992 86.4578 37.672C86.4578 39.604 85.8978 41.354 84.7778 42.922C83.6578 44.462 81.9918 45.526 79.7798 46.114L86.7938 58H79.9897ZM70.7498 42.166H75.6637C77.2598 42.166 78.4497 41.788 79.2337 41.032C80.0177 40.248 80.4098 39.17 80.4098 37.798C80.4098 36.454 80.0177 35.418 79.2337 34.69C78.4497 33.934 77.2598 33.556 75.6637 33.556H70.7498V42.166Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                  <path d="M49.02 58.294C46.976 58.294 45.128 57.944 43.476 57.244C41.852 56.544 40.564 55.536 39.612 54.22C38.66 52.904 38.17 51.35 38.142 49.558H44.442C44.526 50.762 44.946 51.714 45.702 52.414C46.486 53.114 47.55 53.464 48.894 53.464C50.266 53.464 51.344 53.142 52.128 52.498C52.912 51.826 53.304 50.958 53.304 49.894C53.304 49.026 53.038 48.312 52.506 47.752C51.974 47.192 51.302 46.758 50.49 46.45C49.706 46.114 48.614 45.75 47.214 45.358C45.31 44.798 43.756 44.252 42.552 43.72C41.376 43.16 40.354 42.334 39.486 41.242C38.646 40.122 38.226 38.638 38.226 36.79C38.226 35.054 38.66 33.542 39.528 32.254C40.396 30.966 41.614 29.986 43.182 29.314C44.75 28.614 46.542 28.264 48.558 28.264C51.582 28.264 54.032 29.006 55.908 30.49C57.812 31.946 58.862 33.99 59.058 36.622H52.59C52.534 35.614 52.1 34.788 51.288 34.144C50.504 33.472 49.454 33.136 48.138 33.136C46.99 33.136 46.066 33.43 45.366 34.018C44.694 34.606 44.358 35.46 44.358 36.58C44.358 37.364 44.61 38.022 45.114 38.554C45.646 39.058 46.29 39.478 47.046 39.814C47.83 40.122 48.922 40.486 50.322 40.906C52.226 41.466 53.78 42.026 54.984 42.586C56.188 43.146 57.224 43.986 58.092 45.106C58.96 46.226 59.394 47.696 59.394 49.516C59.394 51.084 58.988 52.54 58.176 53.884C57.364 55.228 56.174 56.306 54.606 57.118C53.038 57.902 51.176 58.294 49.02 58.294Z" fill="#1CBCCF" fill-opacity="0.8"/>
+                </svg>
+              </a>
+            </div>
+            <ul class="ft-social d-flex justify-content-center align-items-center align-items-md-end gap-2">
+              <li><a href="https://ko-kr.facebook.com/" target="_blank"><img src="./assets/images/img-icon/Facebook.png" alt="페이스북아이콘"></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank"><img src="./assets/images/img-icon/Instagram.png" alt="인스타그램아이콘"></a></li>
+              <li><a href="https://www.youtube.com/" target="_blank"><img src="./assets/images/img-icon/youtube.png" alt="유튜브아이콘"></a></li>
+            </ul>
+          </div>
+          <div class="ft-info-group d-flex justify-content-between flex-wrap flex-column flex-md-row row-gap-3">
+            <div class="info-group-left d-flex flex-wrap flex-column justify-content-center justify-content-md-end">
+              <ul class="mb-0">
+                <li>Representative : Ki Beom Park</li>
+                <li class="py-3">Business Registration Number : 579-14-01399</li>
+                <li>&copy; SoRa CLINIC All Rights Reserved.</li>
+              </ul>
+              <ul class="d-flex justify-content-center justify-content-md-start align-items-center flex-wrap mb-0">
+                <li class=""><a href="" class="pe-2 border-end border-1 ft-font-color text-decoration-underline">Terms of Use</a></li>
+                <li class="px-2"><a href="" class="ft-font-color text-decoration-underline">Privacy Policy</a></li>
+                <li class="px-2"><a href="" class="ft-font-color text-decoration-underline">Medical certificate Fee Information</a></li>
+              </ul>
+            </div>
+            <div class="info-group-right d-flex flex-column gap-3 d-none d-md-block">
+              <span>Operating Hours</span>
+              <ul class="mb-0">
+                <li class="py-1">Weekdays10:30 AM – 9:00 PM</li>
+                <li class="py-1">Weekends10:30 AM – 5:00 PM</li>
+                <li class="py-1">Public Holidays10:30 AM – 5:00 PM</li>
+                <li class="py-1">Korean Hoildays Closed.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="quick-group gototop">
+      <div class="quick-area">
+        <ul class="quick-menu">
+          <li>
+            <a href="https://instagram.com" class="quick-item instagram" target="_blank">
+              <img src="./assets/images/img-icon/instagram_floating_white.png" alt="인스타그램" class="icon" />
+              <span class="text">Instagram</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="tel:010-1234-5678" class="quick-item phone">
+              <img src="icons/phone.png" alt="전화문의" class="icon" />
+              <span class="text">전화문의</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="quick-item calendar">
+              <img src="icons/calendar.png" alt="예약하기" class="icon" />
+              <span class="text">예약하기</span>
+            </a>
+          </li> -->
+          <li>
+            <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" class="quick-item talk" target="_blank">
+              <img src="./assets/images/img-icon/kakao-talk_floating_white.png" alt="카톡상담" class="icon" />
+              <span class="text">Kakaotalk</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#" class="quick-item gift">
+              <img src="icons/gift.png" alt="이벤트" class="icon" />
+              <span class="text">이벤트</span>
+            </a>
+          </li> -->
+          <li class="">
+            <a href="#" class="quick-item quick-link gototop-link">
+              <svg class="icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="#fff" aria-hidden="true">
+                <path d="M9.43 24.38V5.55L2.68 12.52a1 1 0 0 1-1.46-1.3L9.89 0.48a1 1 0 0 1 1.44 0l9.43 9.75a1 1 0 0 1-1.46 1.3L12.57 5.55v18.83A1.63 1.63 0 0 1 11 26a1.63 1.63 0 0 1-1.57-1.63Z"/>
+              </svg>
+              <span class="text">Top</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap 5 JS CDN (Popper 포함) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 바닐라 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/header.js"></script>
+
+  </body>
