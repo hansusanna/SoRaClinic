@@ -158,10 +158,10 @@
   }
 
   /* 개별 배경 이미지 */
-  .Ulthera_bg  { background-image: url('../assets/images/img-main/original_tr1.png'); }
-  .Botox_bg    { background-image: url('../assets/images/img-main/original_tr2.png'); }
-  .Inmode_bg   { background-image: url('../assets/images/img-main/original_tr3.png'); }
-  .Thermage_bg { background-image: url('../assets/images/img-main/original_tr4.png'); }
+  .Ulthera_bg  { background-image: url('http://hansusanna.github.io/soraclinic/img/main/original_tr1.png'); }
+  .Botox_bg    { background-image: url('http://hansusanna.github.io/soraclinic/img/main/original_tr2.png'); }
+  .Inmode_bg   { background-image: url('http://hansusanna.github.io/soraclinic/img/main/original_tr3.png'); }
+  .Thermage_bg { background-image: url('http://hansusanna.github.io/soraclinic/img/main/original_tr4.png'); }
   
   /* 태블릿 2열 */
   @media (max-width: 992px) {
@@ -201,7 +201,7 @@
 #sc-our-story {
   &.section-about {
     background-color: $colorSubbg;
-    background-image: url(../assets/images/img-main/about_bg_circle.png);
+    background-image: url(http://hansusanna.github.io/soraclinic/img/main/about_bg_circle.png);
     background-repeat: no-repeat;
     background-size: 600px;
     background-position: right top;
