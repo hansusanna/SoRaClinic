@@ -5,6 +5,10 @@
 @import "./_global.scss";
 @import "./_typography.scss";
 
+body{
+ min-width: none !important; 
+}
+
 //header
 .nav {
   font-size: $naviMenu;

@@ -722,6 +722,10 @@ p, .text-body {
   font-size: 0.75rem;
 }
 
+body {
+  min-width: none !important;
+}
+
 .nav {
   font-size: 1.125rem;
   font-weight: 300;
