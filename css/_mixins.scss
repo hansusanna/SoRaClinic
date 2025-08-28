@@ -1,0 +1,114 @@
+@charset 'UTF-8';
+
+@use "sass:list";
+@use "sass:math";
+@use "sass:map";
+
+// Flexbox Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Fixed Position Mixins
+@mixin fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+@mixin fixed-quick-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+@mixin fixed-quick-center {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 멀티라인
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  display: box; // optional
+  line-clamp: $lines; // 표준
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+//장애인 웹접근성용
+@mixin blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+// spacing
+@mixin sora-spacing($prefix, $property) {
+  @for $i from 1 through list.length($spaces) {
+    $space: list.nth($spaces, $i);
+    .#{$prefix}-#{$i - 1} { #{$property}: $space !important; }
+  }
+}
+
+// colors
+@mixin sora-color() {
+  @each $name, $value in $colors {
+    .text-#{$name} { color: $value !important; }
+    .bg-#{$name}   { background-color: $value !important; }
+  }
+}
+
+
+// =====================================
+// px → clamp() 변환 (font-size, line-height 공용)
+// =====================================
+@function fluid-clamp($min, $max, $min-vw: 320, $max-vw: 1920) {
+  // px → rem
+  $min-rem: ($min / 16) * 1rem;
+  $max-rem: ($max / 16) * 1rem;
+  $grow-rem: (($max - $min) / 16) * 1rem; // ← 증가폭도 rem로
+
+  @return clamp(
+    $min-rem,
+    calc(#{$min-rem} + #{$grow-rem} * ((100vw - #{$min-vw}px) / #{($max-vw - $min-vw)})),
+    $max-rem
+  );
+}
+
+@mixin fs-px($min, $max: null) {
+  @if $max == null {
+    // 단일 값이면 그냥 px → rem 변환
+    font-size: ($min / 16) * 1rem;
+  } @else {
+    // min~max 유동 폰트
+    font-size: fluid-clamp($min, $max);
+  }
+}
+@mixin lh-px($min, $max) { line-height: fluid-clamp($min, $max); }

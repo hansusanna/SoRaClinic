@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+
+@import "./_global.scss";
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_typography.scss";
+
+
+.multi-line-ellipsis-2 {
+  @include line-clamp(2);
+}
+.multi-line-ellipsis-3 {
+  @include line-clamp(3);
+}
+

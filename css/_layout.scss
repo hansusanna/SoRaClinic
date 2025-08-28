@@ -1,0 +1,84 @@
+@charset 'UTF-8';
+
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_global.scss";
+@import "./_typography.scss";
+
+//header
+.nav {
+  font-size: $naviMenu;
+  font-weight: $fw300;
+  letter-spacing: 1.1px;
+}
+
+.flex-center {@include flex-center;}
+.flex-between{@include flex-between;}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+//장애인 웹접근성용
+.blind { @include blind;}
+
+// Utility
+.text-muted {color: $colorMuted;}
+
+.bg-primary {
+  background-color: $primaryColor !important;
+  color: #fff;
+}
+
+.bg-accent {
+  background-color: $colorAccent !important;
+  color: #000;
+}
+
+.border-light {
+  border: 1px solid $border-light;
+}
+
+.border-dark {
+  border: 1px solid $border-dark;
+}
+
+.left1 {
+  left: 0.5rem;
+}
+.top1 {
+  top: 0.5rem;
+}
+
+/* Footer */
+#ft {
+  background: $basicColor;
+
+  .ft-info-group {
+    color:$colorSecondary;
+
+    .info-group-left {
+      @include fs-px(12);
+      font-weight:$fw300;
+    }
+
+    .info-group-right {
+      @include fs-px(12);
+      font-weight: $fw400;
+    }
+  }
+
+  .ft-social {
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+/* Footer font util */
+.ft-font-color {
+  color:$colorSecondary;
+}

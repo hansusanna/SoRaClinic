@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+@use "sass:math";
+// @import "./_mixins.scss";
+// @import "./_variables.scss";
+
+
+// ==========================
+// Font-size (.fs-12 ~ .fs-26)
+@for $size from $min-fs through $max-fs {
+  .fs-#{$size} {
+    font-size: clamp(
+      #{$size}px, 
+      calc(#{$size}px + (#{$size} - $min-fs) * ((100vw - #{$min-vw}px) / (#{$max-vw - $min-vw}))), 
+      #{$size + 4}px
+    ) !important;
+  }
+}
+
+// Font-weight (.fw100 ~ .fw900)
+@each $weight in $font-weights {
+  .fw#{$weight} {
+    font-weight: $weight !important;
+  }
+}
+
+// Line-height (.lh_0_8 ~ .lh_3_0)
+// @for $i from $lh-start through $lh-end {
+//   $val: math.div($i, 10);
+//   $class: #{math.floor($val)}_#{($i % 10)};
+//   .lh_#{$class} { line-height: $val !important; }
+// }
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}

@@ -1,0 +1,70 @@
+@import "./_global.scss";
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+// Pretendard 로드
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+// Fonts
+$fontBase: 'Pretendard','Noto Sans JP','Noto Sans SC', Arial, sans-serif;
+$naviMenu: 1.125rem; /*18px*/
+$eventTit: 4rem; /*64px*/
+$eventTit2:2rem; /*32px*/ 
+$subH2: 2.75rem; /*44px*/
+
+
+// 기본 텍스트 스타일
+body {
+  font-family: $fontBase;
+  line-height: 1.1;
+  color: $basicColor;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+// 헤딩 스케일 (필요에 맞춰 조절)
+h1, .h1 {
+  @include fs-px(36, 44);   
+  @include lh-px(12, 16); // 1.2 ~ 1.6
+  font-weight: $fw600;
+}
+h2, .h2 {
+  @include fs-px(30, 36); 
+  @include lh-px(12, 16);
+  font-weight: $fw600;
+}
+h3, .h3 {
+  @include fs-px(24, 30);  
+  @include lh-px(12, 16);
+  font-weight: $fw600;
+}
+h4, .h4 {
+  @include fs-px(20, 24);  
+  @include lh-px(12, 16);
+  font-weight: $fw500;
+}
+h5, .h5 {
+  @include fs-px(18, 22); 
+  @include lh-px(12, 16);
+  font-weight: $fw500;
+}
+p, .text-body {
+  @include fs-px(16, 18);
+  @include lh-px(14, 20);
+  color: $colorText;
+}
+.small {
+  @include fs-px(12, 14); 
+  @include lh-px(12, 18); // 1.2 ~ 1.8
+  color: $colorMuted;
+}
+.caption { @include fs-px(12); }
+
+
+// 텍스트 유틸 (필요시만)
+// .text-center { text-align: center !important; }
+// .text-right  { text-align: right !important; }
+// .text-left   { text-align: left !important; }
