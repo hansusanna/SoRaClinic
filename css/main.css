@@ -2099,16 +2099,16 @@ p, .text-body {
   }
 }
 #sc-our-value .Ulthera_bg {
-  background-image: url("http://hansusanna.github.io/soraclinic/img/main/original_tr1.png");
+  background-image: url("http://hansusanna.github.io/SoRaClinic/img/main/original_tr1.png");
 }
 #sc-our-value .Botox_bg {
-  background-image: url("http://hansusanna.github.io/soraclinic/img/main/original_tr2.png");
+  background-image: url("http://hansusanna.github.io/SoRaClinic/img/main/original_tr2.png");
 }
 #sc-our-value .Inmode_bg {
-  background-image: url("http://hansusanna.github.io/soraclinic/img/main/original_tr3.png");
+  background-image: url("http://hansusanna.github.io/SoRaClinic/img/main/original_tr3.png");
 }
 #sc-our-value .Thermage_bg {
-  background-image: url("http://hansusanna.github.io/soraclinic/img/main/original_tr4.png");
+  background-image: url("http://hansusanna.github.io/SoRaClinic/img/main/original_tr4.png");
 }
 @media (max-width: 992px) {
   #sc-our-value .services-banner {
@@ -2142,7 +2142,7 @@ p, .text-body {
 
 #sc-our-story.section-about {
   background-color: #cbf3f0;
-  background-image: url(http://hansusanna.github.io/soraclinic/img/main/about_bg_circle.png);
+  background-image: url(http://hansusanna.github.io/SoRaClinic/img/main/about_bg_circle.png);
   background-repeat: no-repeat;
   background-size: 600px;
   background-position: right top;
