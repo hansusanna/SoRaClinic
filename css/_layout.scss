@@ -9,8 +9,153 @@
 body{
  min-width: none !important; 
 }
-#headerwarp .header_box{
-background: rgba(255, 255, 255, 0.5) !important;
+// #headerwarp .header_box{
+// background: rgba(255, 255, 255, 0.5) !important;
+// }
+
+// 마지막 항목 여백/폭
+.gNavi > ul > li:last-child { padding-right: 0; }
+#gNavi.gNavi > ul > li:last-child ul li { width: 150px; }
+
+// ====================== GNB =======================
+#gNavi {
+  // "상단에 붙어있을때" 서브아이템 보이기 강제
+  > ul ul li { display: block !important; }
+
+  // 대메뉴 활성(호버 시)
+  &.gNavi > ul > li:hover > a { color: $accent !important; }
+
+  > ul {
+    position: relative;
+
+    // 네비 배경(글래스 윙)
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 0;
+      background-color: $nav-glass;
+      @include transition-height();
+      backdrop-filter: blur(5px);
+    }
+
+    // 소메뉴 (펼침 영역)
+    ul {
+      z-index: -10000; // 의도: 상단 대메뉴와 포개임 방지
+      @include transition-height();
+      height: 0;
+      overflow: hidden;
+      display: block;
+      opacity: 1;
+      width: calc(100% + 60px);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+
+      // 대메뉴와 겹치지 않도록 상단 여백
+      &::before {
+        content: "";
+        display: block;
+        height: $nav-h;
+      }
+    }
+
+    // 네비 전체 호버 시: 윙/서브메뉴 전체 펼침
+    &:hover {
+      &::before { height: $submenu-h !important; }
+      ul { height: $submenu-h !important; }
+    }
+  }
+
+  // 각 항목 호버 시 해당 항목의 서브메뉴 펼침
+  &.gNavi > ul > li:hover ul { height: $submenu-h; }
+}
+
+// ====================== Header wrapper =============
+#headerwarp {
+  position: relative;
+
+  .header_box {
+    background: none !important;
+    border-bottom: none !important;
+    height: $nav-h !important;
+    transition: none !important;
+  }
+
+  .web_logo {
+    position: unset !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cssmenu {
+    float: none !important;
+    width: 100% !important;
+    justify-content: center;
+    display: flex;
+  }
+
+  .logo {
+    float: none !important;
+    width: 180px;
+  }
+
+  // 상단 구분 화이트선
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: $nav-h;
+    left: 0;
+    background: $text-white;
+    width: 0;
+  }
+
+  &.bg_change::after {
+    width: 100%;
+    transition-delay: 0.3s;
+    transition: width 0.5s;
+  }
+
+  // 스크롤 상태
+  &.scroll {
+    // 스크롤 시 상단 배경 스트립 높이
+    #gNavi > ul::before { height: $nav-h; }
+
+    // 필요 시 확장 지점 (원본 주석 유지)
+    // #gNavi > ul ul { }
+  }
+}
+
+// ====================== Header sub / util ==========
+#headersub {
+  position: unset !important;
+
+  .logoArea { margin: 0 !important; }
+
+  .utilmenu {
+    float: none !important;
+    height: 37px;
+    z-index: 100;
+    color: $text-white !important;
+    width: 180px;
+    padding: 0 20px;
+
+    li:nth-child(1) { padding: 0 20px; }
+
+    .top_txt {
+      color: $text-white;
+      font-family: 'YUniverse-B', 'Pretendard Variable', sans-serif;
+      font-style: normal;
+
+      &:hover { color: $accent; }
+    }
+  }
 }
 
 .m_visual {
@@ -18,15 +163,9 @@ background: rgba(255, 255, 255, 0.5) !important;
   overflow: hidden !important;
 } 
 
+
 #footer1303 #footer{
   background-color: #e6f7f9 !important;
-}
-
-//header
-.nav {
-  font-size: $naviMenu;
-  font-weight: $fw300;
-  letter-spacing: 1.1px;
 }
 
 .flex-center {@include flex-center;}

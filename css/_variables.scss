@@ -78,3 +78,10 @@ $colors: (
 .sub-bg{
   background-color:$colorSubbg;
 }
+
+// i-web custom class
+$nav-h: 70px !default;
+$submenu-h: 250px !default;
+$accent: #0094FF !default;
+$nav-glass: rgba(200, 224, 246, 0.7) !default;
+$text-white: #fff !default;
