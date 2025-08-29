@@ -5,12 +5,15 @@
 @import "./_global.scss";
 @import "./_typography.scss";
 
+/*아이웹 커스텀 클래스*/
 body{
  min-width: none !important; 
 }
 #headerwarp .header_box{
 background: rgba(255, 255, 255, 0.5) !important;
 }
+
+div.m_visual {display: none !important;}
 
 #footer1303 #footer{
   background-color: #e6f7f9 !important;
