@@ -13,7 +13,10 @@ body{
 background: rgba(255, 255, 255, 0.5) !important;
 }
 
-div.m_visual {display: none !important;}
+.m_visual {
+  height: 0 !important;
+  overflow: hidden !important;
+} 
 
 #footer1303 #footer{
   background-color: #e6f7f9 !important;

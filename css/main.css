@@ -722,12 +722,18 @@ p, .text-body {
   font-size: 0.75rem;
 }
 
+/*아이웹 커스텀 클래스*/
 body {
   min-width: none !important;
 }
 
 #headerwarp .header_box {
   background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.m_visual {
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 #footer1303 #footer {
