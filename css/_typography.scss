@@ -62,9 +62,3 @@ p, .text-body {
   color: $colorMuted;
 }
 .caption { @include fs-px(12); }
-
-
-// 텍스트 유틸 (필요시만)
-// .text-center { text-align: center !important; }
-// .text-right  { text-align: right !important; }
-// .text-left   { text-align: left !important; }
