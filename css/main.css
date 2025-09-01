@@ -803,7 +803,6 @@ body {
 /* ---------------- 타이포/색상 ---------------- */
 .gNavi ul li {
   font-size: 17px !important;
-  height: 60px !important;
 }
 
 #gNavi.gNavi > ul > li > ul > li:last-child {
