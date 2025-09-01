@@ -19,7 +19,7 @@ body{
 #gNavi > ul ul li { display: block !important; }
 
 /* ---------------- 대메뉴 활성화 ---------------- */
-#gNavi.gNavi > ul > li:hover > a { color: #0094FF !important; }
+#gNavi.gNavi > ul > li:hover > a { color: #1CBCCF !important; }
 
 /* 네비 배경(::before)와 소메뉴에 공통 트랜지션 */
 #gNavi.gNavi > ul > li > ul,
@@ -53,7 +53,7 @@ body{
   left: 0; right: 0;
   top: 0;
   height: 0;
-  background-color: rgba(200, 224, 246, 0.7);
+  background-color: rgba(28, 188, 207, 0.7);
   backdrop-filter: blur(5px);
 }
 
@@ -84,36 +84,13 @@ body{
 }
 
 /* 서브메뉴 hover (충돌 정리: 유리색 유지) */
-.gNavi ul ul li:hover { color: rgba(200, 224, 246, 0.7); }
+.gNavi ul ul li:hover { color: rgba(28, 188, 207, 0.7); }
   
-/*  스크롤을 내렸을때의 날개 상단위치 */
-  // #headerwarp.scroll  #gNavi > ul:before{           
-  // }
-  // #headerwarp.scroll  #gNavi > ul ul{
-          
-  // }
 /*  스크롤시 상단배경처리 */
 #headerwarp.scroll #gNavi > ul:before{
    height:70px;
   }
 
-/*  스크롤을 내리고 마우스를 올렸을때의 날개의 전체길이 */ 
- /*
-#headerwarp.scroll  #gNavi > ul:hover:before{
-    height:180px !important;
-    border-top: 1px solid white;
-}
-#headerwarp.scroll  #gNavi > ul:hover ul{
-   height:180px !important;
-  }
-  */
- /* 
-#headerwarp.scroll     #gNavi.gNavi>ul>li  ul:before{
-  content: "";
-  display:none;
-  height:70px;
-  }
-*/
 /* 상단 구분 화이트선 */
 #headerwarp:after{
     content:"";
@@ -172,24 +149,19 @@ body{
 } 
 .utilmenu .top_txt:hover{ color: #0094FF; }
   
-/* ----------------------- header nav bar color ----------------------- */
-  
+/* ----------------------- header nav bar color ----------------------- */  
 #headerwarp .header_box{
   background:none !important;
   border-bottom: none !important;
   height:70px !important;
   transition:none !important;  
-}
-
-  
-/* ------------------------header logo------------------------ */
-  
+}  
+/* ------------------------header logo------------------------ */ 
   #headerwarp .logo{
   z-index:100;
   }
    
-  .logoArea img ,
-  .logoArea .logoTxtArea{
+.logoArea.logoTxtArea{
       display:none !important;
   }
   
