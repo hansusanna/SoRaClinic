@@ -31,27 +31,3 @@
   clip: rect(0, 0, 0, 0);
   margin: -1px;
 }
-
-// i-web custom class
-.gNavi {
-  ul {
-    li { font-size: 15px !important; }
-
-    ul {
-      li {
-        color: $text-white !important;
-        font-size: 25px;
-        background: unset !important;
-
-        &:hover { color: $nav-glass !important; }
-      }
-    }
-  }
-
-  // 대메뉴 링크
-  > ul > li > a {
-    font-size: 19px !important;
-    line-height: $nav-h !important;
-    height: $nav-h !important;
-  }
-}

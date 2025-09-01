@@ -112,7 +112,3 @@
 }
 @mixin lh-px($min, $max) { line-height: fluid-clamp($min, $max); }
 
-// i-web custom class
-@mixin transition-height($dur: 0.3s) {
-  transition: height $dur;
-}

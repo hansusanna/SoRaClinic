@@ -13,156 +13,195 @@ body{
 // background: rgba(255, 255, 255, 0.5) !important;
 // }
 
-// 마지막 항목 여백/폭
+// i-web custom class
+// ===== GNB =====//
+/* ---------------- 상단에 붙어있을때 ---------------- */
+#gNavi > ul ul li { display: block !important; }
+
+/* ---------------- 대메뉴 활성화 ---------------- */
+#gNavi.gNavi > ul > li:hover > a { color: #0094FF !important; }
+
+/* 네비 배경(::before)와 소메뉴에 공통 트랜지션 */
+#gNavi.gNavi > ul > li > ul,
+#gNavi > ul::before { transition: height 0.3s; }
+
+/* ---------------- 소메뉴 ---------------- */
+#gNavi.gNavi > ul > li > ul{
+  z-index: -10000;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  opacity: 1;
+  width: calc(100% + 60px);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+/* 소메뉴 상단 여백(대메뉴와 겹침 방지) */
+#gNavi.gNavi > ul > li > ul::before{
+  content: "";
+  display: block;
+  height: 70px;
+}
+
+/* ---------------- 네비 배경 ---------------- */
+#gNavi > ul::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; right: 0;
+  top: 0;
+  height: 0;
+  background-color: rgba(200, 224, 246, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* 펼침(그룹화) */
+#gNavi > ul:hover::before { height: 250px !important; }
+#gNavi > ul:hover ul,
+#gNavi.gNavi > ul > li:hover ul { height: 250px !important; }
+
+/* ---------------- 마지막 항목 보정 ---------------- */
 .gNavi > ul > li:last-child { padding-right: 0; }
-#gNavi.gNavi > ul > li:last-child ul li { width: 150px; }
+#gNavi.gNavi > ul > li:last-child ul li { width: 160px; }
 
-// ====================== GNB =======================
-#gNavi {
-  // "상단에 붙어있을때" 서브아이템 보이기 강제
-  > ul ul li { display: block !important; }
+/* ---------------- 타이포/색상 ---------------- */
+.gNavi ul li { font-size: 17px !important; }
 
-  // 대메뉴 활성(호버 시)
-  &.gNavi > ul > li:hover > a { color: $accent !important; }
-
-  > ul {
-    position: relative;
-
-    // 네비 배경(글래스 윙)
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      height: 0;
-      background-color: $nav-glass;
-      @include transition-height();
-      backdrop-filter: blur(5px);
-    }
-
-    // 소메뉴 (펼침 영역)
-    ul {
-      z-index: -10000; // 의도: 상단 대메뉴와 포개임 방지
-      @include transition-height();
-      height: 0;
-      overflow: hidden;
-      display: block;
-      opacity: 1;
-      width: calc(100% + 60px);
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-
-      // 대메뉴와 겹치지 않도록 상단 여백
-      &::before {
-        content: "";
-        display: block;
-        height: $nav-h;
-      }
-    }
-
-    // 네비 전체 호버 시: 윙/서브메뉴 전체 펼침
-    &:hover {
-      &::before { height: $submenu-h !important; }
-      ul { height: $submenu-h !important; }
-    }
-  }
-
-  // 각 항목 호버 시 해당 항목의 서브메뉴 펼침
-  &.gNavi > ul > li:hover ul { height: $submenu-h; }
+/* 대메뉴 */
+.gNavi > ul > li > a{
+  font-size: 19px !important;
+  line-height: 70px !important;
+  height: 70px !important;
 }
 
-// ====================== Header wrapper =============
-#headerwarp {
-  position: relative;
-
-  .header_box {
-    background: none !important;
-    border-bottom: none !important;
-    height: $nav-h !important;
-    transition: none !important;
-  }
-
-  .web_logo {
-    position: unset !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .cssmenu {
-    float: none !important;
-    width: 100% !important;
-    justify-content: center;
-    display: flex;
-  }
-
-  .logo {
-    float: none !important;
-    width: 180px;
-  }
-
-  // 상단 구분 화이트선
-  &::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    top: $nav-h;
-    left: 0;
-    background: $text-white;
-    width: 0;
-  }
-
-  &.bg_change::after {
-    width: 100%;
-    transition-delay: 0.3s;
-    transition: width 0.5s;
-  }
-
-  // 스크롤 상태
-  &.scroll {
-    // 스크롤 시 상단 배경 스트립 높이
-    #gNavi > ul::before { height: $nav-h; }
-
-    // 필요 시 확장 지점 (원본 주석 유지)
-    // #gNavi > ul ul { }
-  }
+/* 서브메뉴 항목 */
+.gNavi ul ul li{
+  color: white !important;
+  font-size: 25px;
+  background: unset !important;
 }
 
-// ====================== Header sub / util ==========
-#headersub {
-  position: unset !important;
-
-  .logo {
-    float: none !important;
-    width: 150px;
-    height: 50px;
+/* 서브메뉴 hover (충돌 정리: 유리색 유지) */
+.gNavi ul ul li:hover { color: rgba(200, 224, 246, 0.7); }
+  
+/*  스크롤을 내렸을때의 날개 상단위치 */
+  // #headerwarp.scroll  #gNavi > ul:before{           
+  // }
+  // #headerwarp.scroll  #gNavi > ul ul{
+          
+  // }
+/*  스크롤시 상단배경처리 */
+#headerwarp.scroll #gNavi > ul:before{
+   height:70px;
   }
 
-  .logoArea { margin: 0 !important; }
-
-  .utilmenu {
-    float: none !important;
-    height: 37px;
-    z-index: 100;
-    color: $text-white !important;
-    width: 180px;
-    padding: 0 20px;
-
-    li:nth-child(1) { padding: 0 20px; }
-
-    .top_txt {
-      color: $text-white;
-      font-family: 'YUniverse-B', 'Pretendard Variable', sans-serif;
-      font-style: normal;
-
-      &:hover { color: $accent; }
-    }
-  }
+/*  스크롤을 내리고 마우스를 올렸을때의 날개의 전체길이 */ 
+ /*
+#headerwarp.scroll  #gNavi > ul:hover:before{
+    height:180px !important;
+    border-top: 1px solid white;
 }
+#headerwarp.scroll  #gNavi > ul:hover ul{
+   height:180px !important;
+  }
+  */
+ /* 
+#headerwarp.scroll     #gNavi.gNavi>ul>li  ul:before{
+  content: "";
+  display:none;
+  height:70px;
+  }
+*/
+/* 상단 구분 화이트선 */
+#headerwarp:after{
+    content:"";
+    position:absolute;
+    height:1px;
+    top:70px;
+    left:0;
+    background:white;
+    width:0;     
+}
+#headerwarp.bg_change:after{   
+   width:100%;
+   transition-delay:0.3s;
+   transition: width 0.5s;
+}
+
+#headersub{
+  position:unset !important;
+}
+  
+/* ----------------------- header 에 로그인 넣기 ----------------------- */
+#headerwarp .web_logo{
+  position:unset !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  
+#headersub .logoArea{ margin: 0 !important; }
+  
+#headerwarp .cssmenu{
+  float: none !important;
+  width: 100% !important;
+  justify-content: center;
+  display:flex;
+}
+#headerwarp .logo{
+  float: none !important;
+  width:160px;
+}
+ #headersub .utilmenu{
+  float: none !important;
+  height: 37px;
+  z-index: 100;
+  color: #fff !important;
+  width:160px;
+  padding: 0 20px;
+}
+  
+.utilmenu .top_txt{
+  color:#fff;
+}
+  
+.utilmenu li:nth-child(1){
+  padding: 0 20px;
+} 
+.utilmenu .top_txt:hover{ color: #0094FF; }
+  
+/* ----------------------- header nav bar color ----------------------- */
+  
+#headerwarp .header_box{
+  background:none !important;
+  border-bottom: none !important;
+  height:70px !important;
+  transition:none !important;  
+}
+
+  
+/* ------------------------header logo------------------------ */
+  
+  #headerwarp .logo{
+  z-index:100;
+  }
+   
+  .logoArea img ,
+  .logoArea .logoTxtArea{
+      display:none !important;
+  }
+  
+ /* #headersub.subpage  .logoArea:hover,  (얘 넣으면 sub페이지 로고 블루색 호버) */
+// #headersub  .logoArea {
+//     width:150px;
+//     padding:60px;
+//     height:70px !important;
+// }
+// #headersub .logoArea:hover, 
+// #headersub.subpage  .logoArea {}
+
 
 .m_visual {
   height: 0 !important;
@@ -190,7 +229,7 @@ body{
 
 .bg-primary {
   background-color: $primaryColor !important;
-  color: #fff;
+  color: $text-white;
 }
 
 .bg-accent {
