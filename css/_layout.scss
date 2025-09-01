@@ -58,16 +58,19 @@ body{
 }
 
 /* 펼침(그룹화) */
-#gNavi > ul:hover::before { height: 250px !important; }
+#gNavi > ul:hover::before { height: 280px !important; }
 #gNavi > ul:hover ul,
-#gNavi.gNavi > ul > li:hover ul { height: 250px !important; }
+#gNavi.gNavi > ul > li:hover ul { height: 280px !important; }
 
 /* ---------------- 마지막 항목 보정 ---------------- */
 .gNavi > ul > li:last-child { padding-right: 0; }
 #gNavi.gNavi > ul > li:last-child ul li { width: 160px; }
 
 /* ---------------- 타이포/색상 ---------------- */
-.gNavi ul li { font-size: 17px !important; }
+.gNavi ul li { 
+  font-size: 17px !important;
+  height:60px !important;
+}
 
 #gNavi.gNavi>ul>li>ul>li:last-child {
   padding-bottom:20px;
