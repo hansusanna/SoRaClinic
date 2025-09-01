@@ -820,8 +820,8 @@ body {
 }
 
 /* 서브메뉴 hover (충돌 정리: 유리색 유지) */
-.gNavi ul ul li:hover {
-  color: rgba(203, 243, 240, 0.5);
+.gNavi ul ul li a:hover {
+  color: #fff;
 }
 
 /*  스크롤시 상단배경처리 */
