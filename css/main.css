@@ -732,6 +732,10 @@ body {
   display: block !important;
 }
 
+.gNavi > ul {
+  height: 60px !important;
+}
+
 /* ---------------- 대메뉴 활성화 ---------------- */
 #gNavi.gNavi > ul > li:hover > a {
   color: #1CBCCF !important;
@@ -815,14 +819,7 @@ body {
 
 /* 서브메뉴 항목 */
 .gNavi ul ul li {
-  color: #808080 !important;
-  font-size: 25px;
   background: unset !important;
-}
-
-/* 서브메뉴 hover (충돌 정리: 유리색 유지) */
-.gNavi ul ul li a:hover {
-  color: #fff;
 }
 
 /*  스크롤시 상단배경처리 */
