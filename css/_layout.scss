@@ -53,7 +53,7 @@ body{
   left: 0; right: 0;
   top: 0;
   height: 0;
-  background-color: rgba(28, 188, 207, 0.7);
+  background-color: rgba(180, 253, 246, 0.5);
   backdrop-filter: blur(5px);
 }
 
@@ -78,13 +78,13 @@ body{
 
 /* 서브메뉴 항목 */
 .gNavi ul ul li{
-  color: white !important;
+  color: #808080 !important;
   font-size: 25px;
   background: unset !important;
 }
 
 /* 서브메뉴 hover (충돌 정리: 유리색 유지) */
-.gNavi ul ul li:hover { color: rgba(28, 188, 207, 0.7); }
+.gNavi ul ul li:hover { color: rgba(180, 253, 246, 0.5); }
   
 /*  스크롤시 상단배경처리 */
 #headerwarp.scroll #gNavi > ul:before{
@@ -126,10 +126,12 @@ body{
   width: 100% !important;
   justify-content: center;
   display:flex;
+  height: auto;
 }
 #headerwarp .logo{
   float: none !important;
   width:160px;
+  height: 50px;
 }
  #headersub .utilmenu{
   float: none !important;
