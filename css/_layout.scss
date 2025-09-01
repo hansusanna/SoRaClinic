@@ -136,12 +136,12 @@ body{
   width:160px;
   height: 50px;
 }
- #headersub .utilmenu{
+#headersub .utilmenu{
   float: none !important;
   height: 37px;
   z-index: 100;
   color: #fff !important;
-  width:160px;
+  width:180px;
   padding: 0 20px;
 }
   
@@ -162,13 +162,13 @@ body{
   transition:none !important;  
 }  
 /* ------------------------header logo------------------------ */ 
-  #headerwarp .logo{
+#headerwarp .logo{
   z-index:100;
-  }
+}
    
 .logoArea.logoTxtArea{
       display:none !important;
-  }
+}
   
  /* #headersub.subpage  .logoArea:hover,  (얘 넣으면 sub페이지 로고 블루색 호버) */
 // #headersub  .logoArea {
