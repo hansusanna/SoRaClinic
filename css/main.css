@@ -883,11 +883,11 @@ body {
   z-index: 100;
   color: #fff !important;
   width: 180px;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 .utilmenu .top_txt {
-  color: #fff;
+  color: #4C5354;
 }
 
 .utilmenu li:nth-child(1) {
@@ -895,7 +895,7 @@ body {
 }
 
 .utilmenu .top_txt:hover {
-  color: #0094FF;
+  color: #1CBCCF;
 }
 
 /* ----------------------- header nav bar color ----------------------- */
