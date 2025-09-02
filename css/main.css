@@ -951,6 +951,15 @@ ul > li:has(> ul):focus-within > a::after {
   background-color: #e6f7f9 !important;
 }
 
+#footer1303 .foot-right-quick .box_ {
+  width: unset !important;
+  height: unset !important;
+}
+
+#footer1303 .foot-right-quick img {
+  width: unset !important;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
