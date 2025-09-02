@@ -959,6 +959,7 @@ ul > li:has(> ul):focus-within > a::after {
   width: unset !important;
   height: unset !important;
   padding-bottom: 5px !important;
+  padding-right: 10px !important;
 }
 
 #footer1303 .foot-right-quick img {
