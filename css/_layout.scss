@@ -220,9 +220,14 @@ ul > li:has(> ul):focus-within > a::after {
   background-color: #e6f7f9 !important;
 }
 
+#footer1303 .foot-right-quick {
+  margin-top:0 !important;
+}
+
 #footer1303 .foot-right-quick .box_ {
   width:unset !important;
   height: unset !important;
+  padding-bottom:5px !important;
 }
 
 #footer1303 .foot-right-quick img{
