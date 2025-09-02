@@ -783,12 +783,12 @@ body {
 
 /* 펼침(그룹화) */
 #gNavi > ul:hover::before {
-  height: 280px !important;
+  height: 320px !important;
 }
 
 #gNavi > ul:hover ul,
 #gNavi.gNavi > ul > li:hover ul {
-  height: 280px !important;
+  height: 320px !important;
 }
 
 /* ---------------- 마지막 항목 보정 ---------------- */
@@ -816,6 +816,10 @@ body {
   height: 70px !important;
 }
 
+.gNavi > ul > li::nth-of-type(4) > a > ul > li {
+  height: unset !important;
+}
+
 /* 서브메뉴 항목 */
 .gNavi ul ul li {
   background: unset !important;
@@ -831,7 +835,7 @@ body {
   content: "";
   position: absolute;
   height: 1px;
-  top: 70px;
+  top: 80px;
   left: 0;
   background: white;
   width: 0;
