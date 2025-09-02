@@ -60,27 +60,20 @@ body{
 }
 
 /* 펼침(그룹화) */
-#gNavi > ul:hover::before { height: 320px !important; }
+#gNavi > ul:hover::before { height: 300px !important; }
 #gNavi > ul:hover ul,
-#gNavi.gNavi > ul > li:hover ul { height: 320px !important; }
+#gNavi.gNavi > ul > li:hover ul { height: 300px !important; }
 
 /* ---------------- 마지막 항목 보정 ---------------- */
 .gNavi > ul > li:last-child { padding-right: 0; }
 #gNavi.gNavi > ul > li:last-child ul li { width: 160px; }
 
-/* ---------------- 타이포/색상 ---------------- */
 .gNavi ul li { 
-  font-size: 17px !important;
   height:70px !important;
-}
-
-#gNavi.gNavi>ul>li>ul>li:last-child {
-  padding-bottom:20px;
 }
 
 /* 대메뉴 */
 .gNavi > ul > li > a{
-  // font-size: 19px !important;
   line-height: 70px !important;
   height: 70px !important;
 }
@@ -90,8 +83,35 @@ body{
   line-height: unset !important;
   padding:10px 0;
 }
+
 .gNavi > ul > li:has(> a.sub_mm) > ul > li:first-child {
-  padding-top:15px;
+  padding-top:30px;
+}
+
+/* 2뎁스를 가진 1뎁스 li만 타겟 */
+ul > li:has(> ul) > a {
+  position: relative;
+  padding-right: 1rem; /* 캐럿 자리 */
+}
+
+/* 캐럿 아이콘 */
+ul > li:has(> ul) > a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-50%) rotate(45deg); /* ▼ 느낌 */
+  opacity: .7;
+}
+
+/* 열림 상태 표기(호버/포커스) */
+ul > li:has(> ul):hover > a::after,
+ul > li:has(> ul):focus-within > a::after {
+  transform: translateY(-50%) rotate(225deg); /* 화살표 회전 */
 }
 
 /* 서브메뉴 항목 */
