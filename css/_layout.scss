@@ -80,14 +80,18 @@ body{
 
 /* 대메뉴 */
 .gNavi > ul > li > a{
-  font-size: 19px !important;
+  // font-size: 19px !important;
   line-height: 70px !important;
   height: 70px !important;
 }
 
 .gNavi > ul > li:has(> a.sub_mm) > ul > li {
-  height: 30px !important;
-  line-height: 30px !important;
+  height: unset !important;
+  line-height: unset !important;
+  padding:10px 0;
+}
+.gNavi > ul > li:has(> a.sub_mm) > ul > li:first-child {
+  padding-top:15px;
 }
 
 /* 서브메뉴 항목 */
