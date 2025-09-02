@@ -71,7 +71,7 @@ body{
 /* ---------------- 타이포/색상 ---------------- */
 .gNavi ul li { 
   font-size: 17px !important;
-  height:70px;
+  height:70px !important;
 }
 
 #gNavi.gNavi>ul>li>ul>li:last-child {
@@ -96,7 +96,7 @@ body{
   
 /*  스크롤시 상단배경처리 */
 #headerwarp.scroll #gNavi > ul:before{
-   height:70px;
+   height:90px;
   }
 
 /* 상단 구분 화이트선 */
@@ -147,6 +147,7 @@ body{
   z-index: 100;
   width:180px;
   font-size:14px;
+  font-weight: 400;
 }
   
 .utilmenu .top_txt{
