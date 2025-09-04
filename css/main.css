@@ -947,10 +947,6 @@ ul > li:has(> ul):focus-within > a::after {
   overflow: hidden !important;
 }
 
-.content-wrap {
-  width: unset !important;
-}
-
 #footer1303 #footer {
   background-color: #e6f7f9 !important;
 }
