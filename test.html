@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>소라 클리닉 소개 (Bootstrap 5)</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    /* 부트스트랩 변수 재정의 (선택 사항) */
+    :root {
+      --bs-info: #0ABAB5;
+      --bs-info-rgb: 10, 186, 181;
+      --bs-info-text-emphasis: #07716e;
+      --bs-info-bg-subtle: #d5f7f6;
+      --bs-info-border-subtle: #abece9;
+
+      --bs-danger: #d63384; /* 원본 핑크와 유사한 부트스트랩 색상 */
+    }
+
+    /* 원본 타임라인의 복잡한 레이아웃을 위한 최소한의 CSS */
+    .timeline-wrapper {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, 
+        rgba(var(--bs-info-rgb), 0.2), 
+        rgba(var(--bs-info-rgb), 0.5), 
+        rgba(var(--bs-danger-rgb), 0.3));
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    .timeline-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(to bottom right, var(--bs-info), var(--bs-danger));
+      border: 4px solid white;
+      border-radius: 50%;
+      box-shadow: var(--bs-shadow-sm);
+      z-index: 10;
+    }
+    .timeline-content {
+      width: calc(50% - 2rem);
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: calc(50% + 2rem);
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: calc(50% + 2rem);
+      text-align: right;
+    }
+
+    /* 모바일 타임라인: 중앙선 대신 왼쪽에 배치 */
+    @media (max-width: 767.98px) {
+      .timeline-line {
+        left: 20px;
+        transform: translateX(0);
+      }
+      .timeline-dot {
+        left: 20px;
+      }
+      .timeline-content {
+        width: auto;
+        margin-left: 4rem !important; /* !important로 짝수 스타일 덮어쓰기 */
+        text-align: left !important; /* !important로 홀수 스타일 덮어쓰기 */
+      }
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 0;
+      }
+    }
+
+    /* 의료진 hover 효과 (원본 group-hover) */
+    .doctor-card .doctor-image {
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      border: 4px solid var(--bs-border-color-translucent);
+    }
+    .doctor-card:hover .doctor-image {
+      transform: scale(1.1);
+      border-color: var(--bs-info);
+    }
+    .doctor-card .doctor-overlay {
+      transition: opacity 0.3s ease;
+      background: linear-gradient(to top, rgba(var(--bs-info-rgb), 0.2), rgba(var(--bs-danger-rgb), 0.1));
+    }
+  </style>
+</head>
+<body>
+
+  <div class="position-relative min-vh-100 bg-light py-5">
+    <div class="container-xl position-relative z-1">
+      
+      <div class="text-center mb-5 pb-4">
+        <h1 class="display-3 fw-bold text-dark">소라 클리닉 소개</h1>
+        <p class="lead text-muted mt-4 mx-auto" style="max-width: 700px;">
+          저희는 K-뷰티 전문가로서 투명한 피부 경험을 선사하기 위해 최선을 다하고 있습니다.
+        </p>
+      </div>
+
+      <section class="mb-5 pb-4">
+        <h2 class="h1 fw-bold text-danger text-center mb-5">소라 클리닉 History</h2>
+        
+        <div class="timeline-wrapper">
+          <div class="timeline-line d-none d-md-block" aria-hidden="true"></div>
+          <div class="space-y-12">
+            
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="card shadow-sm border border-info-subtle rounded-4 bg-white bg-opacity-75">
+                  <div class="card-body p-4">
+                    <h3 class="h4 text-info fw-bold mb-2">2018</h3>
+                    <h4 class="h5 text-dark fw-semibold mb-3">SoRa Clinic 설립</h4>
+                    <p class="text-muted small">완벽한 K-뷰티 시술을 전 세계 고객에게 제공하기 위해 SoRa Clinic을 설립했습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="card shadow-sm border border-info-subtle rounded-4 bg-white bg-opacity-75">
+                  <div class="card-body p-4">
+                    <h3 class="h4 text-info fw-bold mb-2">2019</h3>
+                    <h4 class="h5 text-dark fw-semibold mb-3">시그니처 글래스 스킨 트리트먼트 도입</h4>
+                    <p class="text-muted small">소라 클리닉만의 글래스 스킨 트리트먼트를 선보이며, 글로벌 K-뷰티 표준을 선도했습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="card shadow-sm border border-info-subtle rounded-4 bg-white bg-opacity-75">
+                  <div class="card-body p-4">
+                    <h3 class="h4 text-info fw-bold mb-2">2020</h3>
+                    <h4 class="h5 text-dark fw-semibold mb-3">K-뷰티 혁신</h4>
+                    <p class="text-muted small">팬데믹 시기에도 고객을 위해 고도화된 수분 치료와 홈케어 상담 시스템을 개발했습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="card shadow-sm border border-info-subtle rounded-4 bg-white bg-opacity-75">
+                  <div class="card-body p-4">
+                    <h3 class="h4 text-info fw-bold mb-2">2022</h3>
+                    <h4 class="h5 text-dark fw-semibold mb-3">전문 인력 확충 및 강남 VIP 클리닉 오픈</h4>
+                    <p class="text-muted small">K-뷰티 전문가 팀을 확충하고, 강남에 플래그십 클리닉을 오픈했습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="card shadow-sm border border-info-subtle rounded-4 bg-white bg-opacity-75">
+                  <div class="card-body p-4">
+                    <h3 class="h4 text-info fw-bold mb-2">2024</h3>
+                    <h4 class="h5 text-dark fw-semibold mb-3">글로벌 K-뷰티 어워드 수상</h4>
+                    <p class="text-muted small">‘Best K-Beauty Clinic’ 상을 수상하며, 시그니처 시술을 전 세계로 확장했습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="card shadow-sm border border-info-subtle rounded-4 bg-white bg-opacity-75">
+                  <div class="card-body p-4">
+                    <h3 class="h4 text-info fw-bold mb-2">2025</h3>
+                    <h4 class="h5 text-dark fw-semibold mb-3">SoRa Clinic 글로벌 사이트 오픈</h4>
+                    <p class="text-muted small">외국인 고객도 쉽게 예약할 수 있도록 SoRa Clinic 글로벌 웹사이트를 오픈했습니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5 pb-4">
+        <h2 class="h1 fw-bold text-center text-dark mb-5">의료진 소개</h2>
+        
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="text-center doctor-card">
+              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
+                <img src="/images/doctor/doctor3.png" alt="Dr. Sora Kim — 설립자 / 대표원장" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              </div>
+              <h3 class="h5 fw-semibold text-dark mb-1">Dr. Sora Kim</h3>
+              <p class="fw-medium text-info">설립자 / 대표원장</p>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-lg-3">
+            <div class="text-center doctor-card">
+              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
+                <img src="/images/doctor/doctor2.png" alt="Dr. Min-Jung Lee — 피부과 전문의" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              </div>
+              <h3 class="h5 fw-semibold text-dark mb-1">Dr. Min-Jung Lee</h3>
+              <p class="fw-medium text-info">피부과 전문의</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="text-center doctor-card">
+              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
+                <img src="/images/doctor/doctor1.png" alt="Ji-Woo Park — 피부과 전문의" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              </div>
+              <h3 class="h5 fw-semibold text-dark mb-1">Ji-Woo Park</h3>
+              <p class="fw-medium text-info">피부과 전문의</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="text-center doctor-card">
+              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
+                <img src="/images/doctor/doctor4.png" alt="Hye-Jin Choi — 피부 컨설턴트" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              </div>
+              <h3 class="h5 fw-semibold text-dark mb-1">Hye-Jin Choi</h3>
+              <p class="fw-medium text-info">피부 컨설턴트</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="card shadow-lg border-0 rounded-4 bg-white bg-opacity-75">
+          <div class="card-body p-4 p-sm-5">
+            <div class="text-center">
+              <h2 class="h1 fw-bold text-dark mb-4">우리의 미션</h2>
+              <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                소라 클리닉에서는 모든 분들이 꿈꾸는 피부를 가질 자격이 있다고 믿습니다.
+              </p>
+              <div class="row g-4 mt-5">
+                <div class="col-md-4">
+                  <div class="text-center bg-light bg-opacity-50 p-4 rounded-3 border h-100">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-info-subtle" style="width: 64px; height: 64px;">
+                      <svg class="text-info" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="h5 fw-semibold text-dark mb-2">진정한 K-뷰티</h3>
+                    <p class="text-muted small">전통적인 한국 스킨케어 지혜와 현대 혁신의 만남</p>
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="text-center bg-light bg-opacity-50 p-4 rounded-3 border h-100">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-danger-subtle" style="width: 64px; height: 64px;">
+                      <svg class="text-danger" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="h5 fw-semibold text-dark mb-2">전문적인 케어</h3>
+                    <p class="text-muted small">고객님의 피부 여정을 위한 고도로 훈련된 전문가</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-center bg-light bg-opacity-50 p-4 rounded-3 border h-100">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-primary-subtle" style="width: 64px; height: 64px;">
+                      <svg class="text-primary" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="h5 fw-semibold text-dark mb-2">맞춤형 결과</h3>
+                    <p class="text-muted small">고객 고유의 피부 요구에 맞춘 트리트먼트</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
