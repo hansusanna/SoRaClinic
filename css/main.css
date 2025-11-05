@@ -948,7 +948,7 @@ ul > li:has(> ul):focus-within > a::after {
 }
 
 #footer1303 #footer {
-  background-color: #e6f7f9 !important;
+  background-color: #F5ECFF !important;
 }
 
 #footer1303 .foot-right-quick {
@@ -958,14 +958,16 @@ ul > li:has(> ul):focus-within > a::after {
 #footer1303 .foot-right-quick .box_ {
   width: unset !important;
   height: unset !important;
-  padding-bottom: 5px !important;
-  padding-right: 10px !important;
+  padding-bottom: 10px !important;
+  padding-right: 20px !important;
 }
 
 #footer1303 .foot-right-quick img {
   width: unset !important;
 }
-
+#footer1303 .top_btn {
+    background: #C084FC !important;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -2683,10 +2685,10 @@ body.menu-open {
 }
 
 #ft {
-  background: #E6F7F9;
+  background: #F5ECFF;
 }
 #ft .ft-group .ft-info-group {
-  color: #999999;
+  color: #434343;
 }
 #ft .ft-group .ft-info-group .info-group-left {
   font-size: 14px;

@@ -1,25 +1,17 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>소라 클리닉 소개 (Bootstrap 5)</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 
   <style>
-    /* 부트스트랩 변수 재정의 (선택 사항) */
+    /* 부트스트랩 변수 재정의 */
     :root {
       --bs-info: #0ABAB5;
       --bs-info-rgb: 10, 186, 181;
       --bs-info-text-emphasis: #07716e;
       --bs-info-bg-subtle: #d5f7f6;
       --bs-info-border-subtle: #abece9;
-
-      --bs-danger: #d63384; /* 원본 핑크와 유사한 부트스트랩 색상 */
+      --bs-danger: #e54a9a;
     }
 
-    /* 원본 타임라인의 복잡한 레이아웃을 위한 최소한의 CSS */
+    /* 타임라인*/
     .timeline-wrapper {
       max-width: 900px;
       margin-left: auto;
@@ -86,35 +78,40 @@
       }
     }
 
-    /* 의료진 hover 효과 (원본 group-hover) */
+    /* 의료진 hover 효과*/
     .doctor-card .doctor-image {
       transition: transform 0.3s ease, border-color 0.3s ease;
-      border: 4px solid var(--bs-border-color-translucent);
+
+    }
+    /* 부모 .doctor-card에 테두리 스타일 추가 */
+    .doctor-card .doctor-image-wrapper {
+        border: 4px solid var(--bs-border-color-translucent);
+        transition: border-color 0.3s ease;
+    }
+    .doctor-card:hover .doctor-image-wrapper {
+      border-color: var(--bs-info);
     }
     .doctor-card:hover .doctor-image {
       transform: scale(1.1);
-      border-color: var(--bs-info);
     }
     .doctor-card .doctor-overlay {
       transition: opacity 0.3s ease;
       background: linear-gradient(to top, rgba(var(--bs-info-rgb), 0.2), rgba(var(--bs-danger-rgb), 0.1));
     }
   </style>
-</head>
-<body>
 
-  <div class="position-relative min-vh-100 bg-light py-5">
+  <div class="position-relative min-vh-100 py-5">
     <div class="container-xl position-relative z-1">
       
       <div class="text-center mb-5 pb-4">
         <h1 class="display-3 fw-bold text-dark">소라 클리닉 소개</h1>
-        <p class="lead text-muted mt-4 mx-auto" style="max-width: 700px;">
+        <p class="lead text-muted mt-4 mx-auto">
           저희는 K-뷰티 전문가로서 투명한 피부 경험을 선사하기 위해 최선을 다하고 있습니다.
         </p>
       </div>
 
       <section class="mb-5 pb-4">
-        <h2 class="h1 fw-bold text-danger text-center mb-5">소라 클리닉 History</h2>
+        <h2 class="h1 fw-bold text-danger text-center mb-5">History</h2>
         
         <div class="timeline-wrapper">
           <div class="timeline-line d-none d-md-block" aria-hidden="true"></div>
@@ -208,9 +205,9 @@
         <div class="row g-4">
           <div class="col-sm-6 col-lg-3">
             <div class="text-center doctor-card">
-              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
-                <img src="/images/doctor/doctor3.png" alt="Dr. Sora Kim — 설립자 / 대표원장" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
-                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              <div class="ratio ratio-1x1 rounded-circle overflow-hidden position-relative mx-auto mb-3 doctor-image-wrapper" style="max-width: 180px;">
+                <img src="https://hansusanna.github.io/SoRaClinic/img/doctor/doctor3.png" alt="Dr. Sora Kim — 설립자 / 대표원장" class="doctor-image object-fit-cover w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 opacity-0 doctor-overlay"></div>
               </div>
               <h3 class="h5 fw-semibold text-dark mb-1">Dr. Sora Kim</h3>
               <p class="fw-medium text-info">설립자 / 대표원장</p>
@@ -219,9 +216,9 @@
           
           <div class="col-sm-6 col-lg-3">
             <div class="text-center doctor-card">
-              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
-                <img src="/images/doctor/doctor2.png" alt="Dr. Min-Jung Lee — 피부과 전문의" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
-                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              <div class="ratio ratio-1x1 rounded-circle overflow-hidden position-relative mx-auto mb-3 doctor-image-wrapper" style="max-width: 180px;">
+                <img src="https://hansusanna.github.io/SoRaClinic/img/doctor/doctor2.png" alt="Dr. Min-Jung Lee — 피부과 전문의" class="doctor-image object-fit-cover w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 opacity-0 doctor-overlay"></div>
               </div>
               <h3 class="h5 fw-semibold text-dark mb-1">Dr. Min-Jung Lee</h3>
               <p class="fw-medium text-info">피부과 전문의</p>
@@ -230,9 +227,9 @@
 
           <div class="col-sm-6 col-lg-3">
             <div class="text-center doctor-card">
-              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
-                <img src="/images/doctor/doctor1.png" alt="Ji-Woo Park — 피부과 전문의" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
-                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              <div class="ratio ratio-1x1 rounded-circle overflow-hidden position-relative mx-auto mb-3 doctor-image-wrapper" style="max-width: 180px;">
+                <img src="https://hansusanna.github.io/SoRaClinic/img/doctor/doctor1.png" alt="Ji-Woo Park — 피부과 전문의" class="doctor-image object-fit-cover w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 opacity-0 doctor-overlay"></div>
               </div>
               <h3 class="h5 fw-semibold text-dark mb-1">Ji-Woo Park</h3>
               <p class="fw-medium text-info">피부과 전문의</p>
@@ -241,9 +238,9 @@
 
           <div class="col-sm-6 col-lg-3">
             <div class="text-center doctor-card">
-              <div class="position-relative mx-auto mb-3" style="width: 192px; height: 192px;">
-                <img src="/images/doctor/doctor4.png" alt="Hye-Jin Choi — 피부 컨설턴트" width="192" height="192" class="rounded-circle object-fit-cover doctor-image w-100 h-100" loading="lazy">
-                <div class="position-absolute top-0 start-0 w-100 h-100 rounded-circle opacity-0 doctor-overlay"></div>
+              <div class="ratio ratio-1x1 rounded-circle overflow-hidden position-relative mx-auto mb-3 doctor-image-wrapper" style="max-width: 180px;">
+                <img src="https://hansusanna.github.io/SoRaClinic/img/doctor/doctor4.png" alt="Hye-Jin Choi — 피부 컨설턴트" class="doctor-image object-fit-cover w-100 h-100" loading="lazy">
+                <div class="position-absolute top-0 start-0 w-100 h-100 opacity-0 doctor-overlay"></div>
               </div>
               <h3 class="h5 fw-semibold text-dark mb-1">Hye-Jin Choi</h3>
               <p class="fw-medium text-info">피부 컨설턴트</p>
@@ -257,14 +254,14 @@
           <div class="card-body p-4 p-sm-5">
             <div class="text-center">
               <h2 class="h1 fw-bold text-dark mb-4">우리의 미션</h2>
-              <p class="lead text-muted mx-auto" style="max-width: 800px;">
+              <p class="lead text-muted mx-auto">
                 소라 클리닉에서는 모든 분들이 꿈꾸는 피부를 가질 자격이 있다고 믿습니다.
               </p>
               <div class="row g-4 mt-5">
                 <div class="col-md-4">
                   <div class="text-center bg-light bg-opacity-50 p-4 rounded-3 border h-100">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-info-subtle" style="width: 64px; height: 64px;">
-                      <svg class="text-info" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-info-subtle" style="width:4rem; height:4rem;">
+                      <svg class="text-info" width="2rem" height="2rem" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                     </div>
                     <h3 class="h5 fw-semibold text-dark mb-2">진정한 K-뷰티</h3>
                     <p class="text-muted small">전통적인 한국 스킨케어 지혜와 현대 혁신의 만남</p>
@@ -273,17 +270,18 @@
                 
                 <div class="col-md-4">
                   <div class="text-center bg-light bg-opacity-50 p-4 rounded-3 border h-100">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-danger-subtle" style="width: 64px; height: 64px;">
-                      <svg class="text-danger" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-danger-subtle" style="width:4rem; height:4rem;">
+                      <svg class="text-danger" width="2rem" height="2rem" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="h5 fw-semibold text-dark mb-2">전문적인 케어</h3>
                     <p class="text-muted small">고객님의 피부 여정을 위한 고도로 훈련된 전문가</p>
                   </div>
                 </div>
+
                 <div class="col-md-4">
                   <div class="text-center bg-light bg-opacity-50 p-4 rounded-3 border h-100">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-primary-subtle" style="width: 64px; height: 64px;">
-                      <svg class="text-primary" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 bg-primary-subtle" >
+                      <svg class="text-primary" width="2rem" height="2rem" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h3 class="h5 fw-semibold text-dark mb-2">맞춤형 결과</h3>
                     <p class="text-muted small">고객 고유의 피부 요구에 맞춘 트리트먼트</p>
@@ -298,6 +296,4 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+
