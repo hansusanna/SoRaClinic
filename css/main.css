@@ -907,7 +907,7 @@ ul > li:has(> ul):focus-within > a::after {
   float: none !important;
   height: 25px;
   z-index: 100;
-  width: 180px;
+  /* width: 180px; */
   font-size: 16px;
   font-weight: 400;
 }
@@ -935,6 +935,7 @@ ul > li:has(> ul):focus-within > a::after {
 /* ------------------------header logo------------------------ */
 #headerwarp .logo {
   z-index: 100;
+  top: -6px;
 }
 
 .logoArea.logoTxtArea {
